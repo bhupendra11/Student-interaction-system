@@ -71,7 +71,7 @@ else
 }
 }
 echo "<div style='color:red;'><br>Your Profile progress bar:".
-	"<progress style=';background-color:green; ' value='$counter' max='10'></progress></div>";
+	"&nbsp;&nbsp;&nbsp;&nbsp;<progress style=';background-color:green;  width:600px;' value='$counter' max='10'>  </progress></div>";
 echo "<div style='text-align:center; height:40px; '>".
 	"<a href='../php/post_question.php' style='text-align:center;color:red;'>".
 	"Post New Question Here...</a></div> ";
