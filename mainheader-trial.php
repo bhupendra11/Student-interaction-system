@@ -19,9 +19,24 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"> 
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"> 
 
+<!--     <link rel="stylesheet" type="text/css" href="./css/navbar.css"/> -->
 
+
+   <!--<style type="text/css">
+        
+        p{
+            padding: 50px;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            background: #f2f2f2;
+            height:100%;
+        }
+        
+    </style>   -->
 
 </head>
+<body>
 
     
 <div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
@@ -29,7 +44,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 
     <div class="container">
 
-        <div class="navbar-header" style="display:inline";> 
+        <div class="navbar-header"> 
 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 
@@ -39,15 +54,15 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
 
-            </button>
+             </button>
 
              
 
-            <div class="navbar-collapse collapse"> 
+             <div class="navbar-collapse collapse"> 
                 <ul class="nav navbar-nav navbar-right pull-left"> 
 
                     <a class="navbar-brand" href="#">Iecsis</a>
-                    <li class="nohover list-unstyled"><a href="./index.php" ><img  src="./images/logo.png" style="margin: -15px 0px -10px 0px;"></img></a></li>
+                    <li class="nohover list-unstyled"><a href="./index.php" ><img  src="logo.png" style="margin: -15px 0px -10px 0px;"></img></a></li>
 
 
 
@@ -67,7 +82,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
                     {
                     ?>
 
-                    <li><a href="./php/logout.php"> <span class="glyphicon glyphicon-log-in"></span>  Logout</a></li>
+                    <li><a href="./php/logout.php"> Logout</a></li>
 
                     <?php
                     }
@@ -83,24 +98,43 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
                     }
                     ?>
 
-                </ul>
+                     </ul>
 
                    
-                <form class="form-search" action="./php/getsearchresult.php" method="post">
-                <div class="">
-                    <div class="input-group col-lg-3 pull-right" style="margin-top:10px;">
-                        <input type="text" class="form-control" placeholder="Search for..." name="search" >
-                        <span class="input-group-btn">
-                        <button type="submit" value="Search" name="submit" class="btn btn-default">Go!</button>
-                        </span>
-                    </div>
-                 </div>   
-                </form>
+                    <form class="form-search" action="./php/getsearchresult.php" method="post">
+                    <div class="">
+                        <div class="input-group col-lg-3 pull-right" style="margin-top:10px;">
+                            <input type="text" class="form-control" placeholder="Search for..." name="search" >
+                            <span class="input-group-btn">
+                            <button type="submit" value="Search" name="submit" class="btn btn-default">Go!</button>
+                            </span>
+                        </div>
+                     </div>   
+                    </form>
 
-       
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                
 
-            </div>
+             </div>
  
 
 
@@ -112,6 +146,3 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 
 
 </div>
-
-
-<body style="margin-top:80px;">
