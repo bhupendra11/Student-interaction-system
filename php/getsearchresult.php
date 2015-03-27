@@ -24,7 +24,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 
 <?php
 error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING & ~E_DEPRECATED);
-	require_once 'connection.php';
+	require_once 'connection1.php';
 	$c_count=0;
 	if(isset($_POST['submit'])){
 		$searchitem = $_POST['search'];

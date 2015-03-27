@@ -1,44 +1,40 @@
 <?php
+
 session_start();
 error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <?php include('header2.php');?>
 <?php
-
+require_once 'connection.php';
 $email=$_SESSION['email'];
 $_SESSION['email']=$email;
 echo " Your Email ".$email;
 
 
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "iecsis";
-$conn =  mysql_connect($servername, $username, $password);
-mysql_select_db($dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}	
+
 
 // edited.....
 $query="select * from user where email='$email' ";
-$result=mysql_query($query);
+$result=mysqli_query($connection,$query) or die(mysql_error());
 $u_id="";
-while($res=mysql_fetch_array($result))
-{
-	$u_id=$res[0];
-}
+
+	$res=mysqli_fetch_assoc($result);
+	$u_id=$res['user_id'];
+
+echo "good".$u_id;
 $question = $_REQUEST['que'];
-   
+ $words = explode(" ",$question);
+   $stop_word[]=array("able","between","why","how","to","whom","where as","from","into","inward","is","isn't","our","ours","ourselves","out","outside","over","overall","own","what","you'll","your","you're","yours","yourself","yourselves","you've");
+
 if($question!="" )
 {
 	$sql = "INSERT INTO tb_question (question,user_id) VALUES( '$question',$u_id)";
-	$status=mysql_query($sql); 
+	$status=mysqli_query($connection,$sql) or die(mysql_error()); 
        if ($status === TRUE) {
 
 echo "Your question posted successfully!";
-//header('location:profile.php');
+
 }
 else
 {
@@ -50,5 +46,16 @@ else
 {
 echo "Please write your Question to post!!";
 }
-
+$querymaxid="select question_id from tb_question where question='{$question}'";
+         $runquerymaxid=mysqli_query($connection,$querymaxid) or die(mysql_error());
+         $retrivemaxid = mysqli_fetch_assoc($runquerymaxid);
+         
+         foreach($words as $word){
+   		  if(in_array($word,$stop_word)){
+   		    	continue;
+   		    }
+   		
+   	     	$query="insert into tb_tags(tags,qid) values('$word','$retrivemaxid[question_id]')";
+   		   mysqli_query($connection,$query) or die(mysql_error());
+   }
 ?>
