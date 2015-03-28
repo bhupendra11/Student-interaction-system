@@ -4,10 +4,10 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 
 ?>
 <?php
-include("header2.php");
+include("header.php");
 ?>
 <?php  
- require('connect.php');
+ require_once 'connection.php';
 
 $email = $_REQUEST['email'];
 $password = $_REQUEST['password'];
@@ -29,8 +29,8 @@ $password=$_SESSION['password'];
 //echo "password=".$password;
 
 $query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
- $result = mysql_query($query) or die(mysql_error());
-$count = mysql_num_rows($result);
+ $result = mysqli_query($connection,$query) or die(mysql_error());
+$count = mysqli_num_rows($result);
 $flag=false;
 $counter=0;
 if($email!="" && $password!="")
@@ -45,10 +45,9 @@ include("count_que_ans.php");
 
 <?php
 $query="select * from user where email='$email'";
-$result = mysql_query($query);
+$result = mysqli_query($connection,$query);
 
-while($row = mysql_fetch_array($result))
-{
+$row = mysqli_fetch_assoc($result);
 echo "<table style='width:100%; height:10%;'>".
 	"<tr><td><h2 style='color:black;'>Welcome to your Profile             ".
 	"</h2></td> <td><h3 style='color:blue; text-align:left;'>Mr./Mrs. :&nbsp;&nbsp;&nbsp;".strtoupper ($row['user_name']).
@@ -62,24 +61,28 @@ if($flag)
 <tr>
 <td width="80%">
 <?php 
+$attribute = array('user_id','user_name','password','college_id','branch','year_of_admission','email','no_of_que_posted','no_of_ans_posted');
 
 for($i=0;$i < 11;$i++)
 {
 if($i !=7 && $i!=8 && $i!=3)
 {
-if($row[$i]!=null)
+	//echo $attribute[$i];
+if($row[$attribute[$i]]!=null)
 {
 $counter++;
 }
 }
 else
 {
-	if($row[$i]!=0)
+	if($row[$attribute[$i]]!=0)
 	{
 	$counter++;
 	}
+
 }
 }
+//echo $counter;
 echo "<div style='color:red;'><br>Your Profile progress bar:".
 	"&nbsp;&nbsp;&nbsp;&nbsp;<progress style=';background-color:green;  width:600px;' value='$counter' max='10'>  </progress></div>";
 echo "<div style='text-align:center; height:40px; '>".
@@ -147,7 +150,7 @@ include 'user_profile_questions.php';
 
 echo "</td></tr></table>";
 
-}
+
 
 
 
