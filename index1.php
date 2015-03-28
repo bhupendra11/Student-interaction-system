@@ -22,7 +22,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 
 <div class="head" style="position: fixed; width: 100%;height:10%; background-color: white;margin-top: 1px;"><?php include('./mainheader.php');?></div>
 <div class='bodywrap'>
-        <div class='left'>
+        <div class='left' style="position: fixed;">
 <ul style="margin-top: 70%;">
 <li><a href="html/question.html">Post Questions</a></li>
 <li><a href="php/answer.php">Post Answer</a></li>
