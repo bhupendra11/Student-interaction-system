@@ -2,19 +2,10 @@
 session_start();
 error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
-<?php include('header2.php');?>
+<?php include('header.php');?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "iecsis";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+require_once 'connection.php';
 $email = $_SESSION['email'];
 $pswd=$_SESSION['pswd'];
    $current_password=$_REQUEST['current_password'];
@@ -26,10 +17,10 @@ $pswd=$_SESSION['pswd'];
 
 	
 $sql="update user set password='$new_password' where email='$email'";
-if ($conn->query($sql) === TRUE) {
+if (mysqli_query($connection,$sql) === TRUE) {
     echo "Password updated successfully";
 } else {
-    echo "Error updating record: " . $conn->error;
+    echo "Error updating record: " ;
 }
 }
 else
@@ -37,5 +28,5 @@ else
 echo "Current Password Did not Match";
 }
 
-$conn->close();
+
 ?>

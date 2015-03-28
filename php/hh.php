@@ -1,3 +1,16 @@
+<<<<<<< HEAD:php/hh.php
+=======
+<?php
+session_start();
+$email=$_SESSION['eml'];
+$password=$_SESSION['pswd'];
+//echo "email=".$email;
+//echo "password=".$password;
+$_SESSION['eml']=$email;
+$_SESSION['password']=$password;
+error_reporting( ~E_NOTICE & ~E_DEPRECATED);
+?>
+>>>>>>> profile.php, css,update profile  presentation changes ;:php/header2.php
 <html>
 
 <head>

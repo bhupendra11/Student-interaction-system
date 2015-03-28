@@ -28,6 +28,8 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 </tr>
 </table>
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 <?php include('php/footer.php');?> 
 	
 	
