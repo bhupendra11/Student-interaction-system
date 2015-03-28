@@ -53,7 +53,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 
 
                     
-                    <li class="active"><a href="./index.php" ><span  class="glyphicon glyphicon-home"></span>Home</a></li>
+                    <li class="active"><a href="index.php" ><span  class="glyphicon glyphicon-home"></span>Home</a></li>
 
                     <li><a href="./php/profile.php" ><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 
