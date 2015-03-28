@@ -84,37 +84,33 @@ text-align:center;
 <td width="70%" height="60%">
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "iecsis";
-$conn =  mysql_connect($servername, $username, $password);
-mysql_select_db($dbname);
+
+require_once 'connection.php';
 
 $query="select * from tb_question order by question_post_date desc";
 
-$result=mysql_query($query);
-$num_rows = mysql_num_rows($result);
+$result=mysqli_query($connection,$query);
+$num_rows = mysqli_num_rows($result);
 //echo "Number of questions:".$num_rows;
 
 $c_count=0;
-while($res=mysql_fetch_array( $result))
+while($res=mysqli_fetch_assoc( $result))
 {
 $c_count++;
 echo "<center><table class='que'><tr><td>Question</td><td>Question_ID</td><td>UserID</td><td>PostDate</td></tr>";
-echo "<tr><td class='question'>".$res[0]."</td><td>".$res[1]."</td><td>".$res[2]."</td><td>".$res[4]."</td></tr>";
+echo "<tr><td class='question'>".$res['question']."</td><td>".$res['question_id']."</td><td>".$res['user_id']."</td><td>".$res['question_post_date']."</td></tr>";
 echo "</table></center><center><table class='ans'>".
 "<tr><td>Question_ID</td><td>Answer</td> <td>USERID</td><td>POST DATE</td><td></td></tr>";
 //$query2="select question_id from answers group by (select question_id questions) order by answer_post_date";
-$query2="select * from tb_answer where question_id=$res[1] order by answer_post_date desc ";
-$result2=mysql_query($query2);
+$query2="select * from tb_answer where question_id=$res[question_id] order by answer_post_date desc ";
+$result2=mysqli_query($connection,$query2);
 //echo "".$res2=mysql_fetch_array( $result2);
-while($res2=mysql_fetch_array($result2))
+while($res2=mysqli_fetch_assoc($result2))
 {
-if(str_word_count($res2[1]<20));
+if(str_word_count($res2['answer']<20));
 {
-echo "<tr><td>".$res2[0]."</td><td class='answer'>".$res2[1]."</td><td>".$res2[4].
-"</td><td>".$res2[6]."</td><td><input class='upvote' type='submit' value='+'></td></tr>";
+echo "<tr><td>".$res2['question_id']."</td><td class='answer'>".$res2['answer']."</td><td>".$res2['user_id'].
+"</td><td>".$res2['answer_post_date']."</td><td><input class='upvote' type='submit' value='+'></td></tr>";
 }
 //else
 //{
