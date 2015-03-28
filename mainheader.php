@@ -94,7 +94,7 @@ else
 -->
 
 <li>
-<form class="form-search" action="/Mini-Project/php/getsearchresult.php" method="post">
+<form class="form-search" action="./php/getsearchresult.php" method="post">
     <div class="input-append">
         <input type="textbox" name="search" class="span2 search-query">
         <button type="submit" value="Search" name="submit" class="btn">Search</button>
