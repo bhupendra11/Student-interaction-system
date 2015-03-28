@@ -56,12 +56,12 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
                 <ul class="nav navbar-nav navbar-right pull-left"> 
 
                     <a class="navbar-brand" href="#">Iecsis</a>
-                    <li class="nohover list-unstyled"><a href="./index.php" >
+                    <li class="nohover list-unstyled"><a href="../index.php" >
                    		<img  src="../images/logo.png" style="margin: -15px 0px -10px 0px;"></img></a>
                     </li>
 
 
-                    <li class="active"><a href="./index.php" >
+                    <li class="active"><a href="../index.php" >
                     <span  class="glyphicon glyphicon-home"></span>Home</a></li>
 
                     
