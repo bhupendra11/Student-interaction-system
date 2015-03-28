@@ -2,10 +2,14 @@
 session_start();
 error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
+<div style="position: fixed; width: 100%;height:13%; background-color: white;">
 <?php include('./mainheader.php');?>
+</div>
+
 <table class="tbl">
 <tr width="100%">
-<td width="20%" style="background-color:#c3dfef;" >
+<div style="position: fixed; ">
+<td width="20%" style="background-color:#c3dfef;style="position: fixed;" >
 <center>
 <ul style="text-align:left;">
 <li><a href="html/question.html">Post Questions</a></li>
@@ -13,7 +17,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 <li><a href="php/preview.php">Preview Question and Answer post!!</a></li>
 </ul>
 </center>
-
+</div>
 
 </td>
 <td width="60%">

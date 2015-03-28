@@ -3,78 +3,77 @@
 	error_reporting(~E_NOTICE & ~E_DEPRECATED);
 
 ?>
-
-
-<?php
-	include("header2.php");
-?>
+<?php include("header.php"); ?>
 <?php  
-	 require('connect.php');
-	$_SESSION['email']=$_REQUEST['email'];
-	$email = $_REQUEST['email'];
-	$password = $_REQUEST['password'];
-	$_SESSION['pswd']=$password;
 
-	if(isset($_SESSION['pswd']) && isset($_SESSION['email'])) 
+require_once 'connection.php';
+$email = $_REQUEST['email'];
+$password = $_REQUEST['password'];
+$_SESSION['pswd']=$password;
+$_SESSION['email']=$email;
+$_SESSION['eml']=$_REQUEST['email'];
+if($email=="" || $password=="")
+{
+	$email=$_SESSION['eml'];
+	$password=$_SESSION['password'];
+}
+$query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
+$result = mysqli_query($connection,$query) or die(mysql_error());
+$count = mysqli_num_rows($result);
+$flag=false;
+$counter=0;
+if($email!="" && $password!="")
+{
+	if ($count == 1)
 	{
-		$password=$_SESSION['pswd'];
-	}
-
-	$query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
-	 $result = mysql_query($query) or die(mysql_error());
-	$count = mysql_num_rows($result);
-	$flag=false;
-	$counter=0;
-
-
-
-	if($email!="" && $password!="")
-	{
-
-	if ($count == 1){
 	$flag=true;
 
 	include("count_que_ans.php");
 ?>
-<!--<a href="count_que_ans.php">Count question and Answer.</a>-->
-
 <?php
-$query="select * from user where email='$email'";
-$result = mysql_query($query);
 
-while($row = mysql_fetch_array($result))
-{
+	$query="select * from user where email='$email'";
+	$result = mysqli_query($connection,$query);
+	$row = mysqli_fetch_assoc($result);
 
-/*
 
-echo "<table style='width:100%; height:10%;'>".
-	"<tr><td><h2 style='color:black;'>Welcome to your Profile             ".
-	"</h2></td> <td><h3 style='color:blue; text-align:left;'>Mr./Mrs. :&nbsp;&nbsp;&nbsp;".strtoupper ($row['user_name']).
-	"</h3></td></tr></table>";
-	echo "<th>";
+	/*
 
-*/	
+	echo "<table style='width:100%; height:10%;'>".
+		"<tr><td><h2 style='color:black;'>Welcome to your Profile             ".
+		"</h2></td> <td><h3 style='color:blue; text-align:left;'>Mr./Mrs. :&nbsp;&nbsp;&nbsp;".strtoupper ($row['user_name']).
+		"</h3></td></tr></table>";
+		echo "<th>";
 
-if($flag)
-{
+	*/	
+
+	if($flag)
+	{
+
+?>
+
+
+<?php 
+		$attribute = array('user_id','user_name','password','college_id','branch','year_of_admission','email','no_of_que_posted','no_of_ans_posted');
+
 
 
 for($i=0;$i < 11;$i++)
 {
-if($i !=7 && $i!=8 && $i!=3)
-{
-if($row[$i]!=null)
-{
-$counter++;
-}
-}
-else
-{
-	if($row[$i]!=0)
+	if($i !=7 && $i!=8 && $i!=3)
 	{
-	$counter++;
+		if($row[$attribute[$i]]!=null)
+		{
+			$counter++;
+		}
+		}
+		else
+		{
+			if($row[$attribute[$i]]!=0)
+			{
+				$counter++;
+			}
 	}
-}
 }
 
 
@@ -150,7 +149,7 @@ echo "
 
 
 	<?php
-	echo "<tr></table>";
+	//echo "<tr></table>";
 
 
 	}
@@ -186,29 +185,7 @@ echo "
 				  <img src='../images/prof-img.jpg' class='img-rounded centered' style='border:solid #888888 1px;' alt='Your Profile Image' width='220' height='170'>";
 
 
-				  ////////////////temp  datttaaaaaaaaaaaaaa/////////////////////////
-
-/*
-
-		echo		 " <hr><tr><td>Your Name:		 </td><td> ".strtoupper ($row['user_name'])."</td></tr>".
-			"<tr><td>Branch:   		</td><td> ".strtoupper ($row['branch'])."</td></tr> ".
-		    "<tr><td> College: 		</td><td>".strtoupper ($row['college'])."</td></tr>".
-			"<tr><td>College Id:	</td><td> ".$row['college_id']."</td></tr>".
-			"<tr><td>Year of Admission: </td><td>".$row['year_of_admission']."</td></tr>".
-			"<tr><td>Email: 		</td><td>".$row['email']."</td></tr>".
-			"<tr><td>Questions: </td><td> ".$row['no_of_que_posted']."</td></tr> ".
-			"<tr><td>Answers:  </td><td>".$row['no_of_ans_posted']."</td></tr>".
-			"<tr><td>Your Profile Image: </td><td> In progress..</td></tr> ".
-			"</table><hr></td>"."<td style='width:70%;'>Recent Questions Posted ...";
-
-
-
-	$_SESSION['clg']=$row['college'];
-	$_SESSION['brnch']=$row['branch'];
-
-
-*/
-
+				  
 
 
 //-------------------------CHECK PROFILE DETAILS-------------------
@@ -291,8 +268,9 @@ echo             "
 		            ";
 
 
-					$counter =70;
+					$counter =  $counter *10;
 					
+					//----------------PROFILE COMPLETION PROGRESS BAR---------------------------------
 
 					echo	"
 							<div class='panel panel-default'>
@@ -310,6 +288,14 @@ echo             "
 
 							
 					";
+					if($counter!=100)
+					 {
+						echo "<p style='color:red;'>Update your profile to get better notification!</p>";
+					 }
+					 else
+					 {
+						echo "<p style='color:green;'> Your profile is Up to date!</p>";
+					 }
 
 
 	//------------------------MIDDLE BLOCK------------------------------------------
@@ -383,7 +369,7 @@ echo 				"
 
 
 
-}
+
 
 
 

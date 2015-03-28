@@ -17,18 +17,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 
 
 	
-	<!--<style type="text/css">
-	    
-	    p{
-	        padding: 50px;
-	        font-size: 32px;
-	        font-weight: bold;
-	        text-align: center;
-	        background: #f2f2f2;
-	        height:100%;
-	    }
-	    
-	</style>  -->
+
 
 
 
