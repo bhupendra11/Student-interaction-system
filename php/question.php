@@ -3,7 +3,7 @@
 session_start();
 error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
-<?php include('header2.php');?>
+<?php include('header.php');?>
 <?php
 require_once 'connection.php';
 $email=$_SESSION['email'];

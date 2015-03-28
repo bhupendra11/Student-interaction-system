@@ -4,11 +4,8 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <?php include('header.php');?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "iecsis";
-    $email=$_SESSION['email'];
+	require_once 'connection.php';
+	$email=$_SESSION['email'];
 	
 	
 	$queid = $_REQUEST['qid'];
@@ -18,21 +15,17 @@ $dbname = "iecsis";
 	if($email!="")
 	{
 	echo "Write your Answer :@".$email;
-	session_start();
-	$conn =  mysql_connect($servername, $username, $password);
-	mysql_select_db($dbname);
+	//session_start();
 	
 	$_SESSION['queid']=$queid;
 
 $query="select * from tb_question where question_id='$queid' and user_id='$uid'";
-$result=mysql_query($query);
+$result=mysqli_query($connection,$query);
   
 echo "<center><table class='tbl1'><tr class='xx'><td>Questions Asked:</td><td>Question Id</td><td>User Id</td><td>Answered Bit</td><td>Post Date</td></tr>";
 
-while($res=mysql_fetch_row( $result))
-{
-echo "<tr><td>Que.. " .$res[0]."</td><td>".$res[1]."</td> <td>".$res[2]."</td> <td>".$res[3]."</td> <td>".$res[4]."</td> </tr><br>";
-}
+$res=mysqli_fetch_assoc($result);	
+echo "<tr><td>Que.. " .$res['question']."</td><td>".$res['question_id']."</td> <td>".$res['user_id']."</td> <td>".$res['answer_bit']."</td> <td>".$res['question_post_date']."</td> </tr><br>";
 echo "</table>"	;
 
 
