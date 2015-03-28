@@ -1,0 +1,212 @@
+#navbar,#footer {
+width:100%;
+height:40px;
+background-color:#366b82;
+}
+
+#navbar ul {
+width:80%;
+margin:0 auto;
+}
+
+#navbar ul li {
+float:left;
+color:#FFF;
+padding:0 20px 0 20px;
+height:40px;
+list-style:none;
+display:block;
+line-height:40px;
+text-align:center;
+
+}
+
+			#navbar ul li a	{							
+						padding: 0 0; 
+						border-left:   #54879d;
+						border-right: #1f5065;
+						text-decoration: none;
+						color: white;
+						display: block;
+						}
+
+				#navbar ul li:hover,li a:hover	{
+						background-color: #54879d;
+						}
+                        li.nohover{
+                            
+                        }
+
+#tfheader{
+		background-color:#c3dfef;
+	}
+	#tfnewsearch{
+		float:right;
+		padding-right:10px;
+		padding-top:10px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+	}
+#footer1{
+
+width:100%;
+height:100px;
+background-color:#366b82;
+
+}
+#left{
+    margin-top: 0px;
+margin-left:0px;
+background-color:red;
+height:100%;
+width:20%;
+display:inline;
+float:left;
+}
+#center{
+background-color:pink;
+    float:center;
+height:100%;
+	
+	margin-top: 0px;
+	margin-left: 20%;
+    margin-right: 30%;  
+    margin-bottom:30%;
+	width:20% ;
+   display:inline;
+  
+}
+#right{
+margin-top: 0px;
+margin-right: 0px;
+background-color:green;
+height:100%;
+float:right;
+width:20%;
+
+
+}
+
+.tbl
+{
+width:100%;
+height:70%;
+border:1px solid white;
+}
+.que
+{
+margin-top:2px;
+width:80%;
+border:1px solid white;
+border-radius:12px;
+background-color:white;
+font-size:20px;
+color:black;
+text-align:left;
+}
+.ans 
+{
+margin-top:4px;
+width:80%;
+font-size:15px;
+border:1px solid white;
+*border-radius:0px 0px 20px 20px;
+*background-color:gray;
+}
+.post_date
+{
+font-size:10px;
+text-align:right; 
+color:blue;
+}
+
+.updatetbl{
+border:1px solid white;
+border-radius:16px;
+background-color:#366b82;
+width:60%;
+height:50%;
+color:white;
+}
+.formbtn
+{
+border:1px solid white;
+background-color:gray;
+width:200px;
+height:25px;
+border-radius:12px;
+color:white;
+}
+.btn
+{
+border:1px solid white;
+background-color:blue;
+width:200px;
+height:25px;
+border-radius:12px;
+color:white;
+}
+
+#foot{
+
+width:100%;
+height:100px;
+background-color:#366b82;
+margin-top:300px;
+}
+
+.formtbl
+	{
+	width:30%;
+	height:20%;
+	border-radius:12px;
+	text-align:left;
+	border:1px solid white;
+	background-color:#366b82;
+	}
+.xx
+{
+background-color:#366b82;
+color:white;
+}
+.tbl1
+{
+border:1px solid white;background-color:#366b82; width:80%;
+}
