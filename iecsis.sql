@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.2.2
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2015 at 02:00 PM
--- Server version: 5.5.27
--- PHP Version: 5.4.7
+-- Generation Time: Mar 29, 2015 at 07:29 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -32,8 +32,7 @@ CREATE TABLE IF NOT EXISTS `college_details` (
   `city` varchar(50) NOT NULL,
   `univ_id` int(11) NOT NULL,
   `branch_details` mediumtext NOT NULL,
-  `college_detail` mediumtext NOT NULL,
-  UNIQUE KEY `branch` (`branch`)
+  `college_detail` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='All colleges and their details';
 
 --
@@ -71,18 +70,17 @@ CREATE TABLE IF NOT EXISTS `tb_answer` (
   `upvote` int(11) NOT NULL,
   `downvote` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `answer_id` int(11) NOT NULL AUTO_INCREMENT,
-  `answer_post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  UNIQUE KEY `answer_id` (`answer_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='All details of answer answered by users.' AUTO_INCREMENT=18 ;
+`answer_id` int(11) NOT NULL,
+  `answer_post_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1 COMMENT='All details of answer answered by users.';
 
 --
 -- Dumping data for table `tb_answer`
 --
 
 INSERT INTO `tb_answer` (`question_id`, `answer`, `upvote`, `downvote`, `user_id`, `answer_id`, `answer_post_date`) VALUES
-(6, 'Sri Ram Memorial', 0, 0, 0, 1, '2015-02-21 18:04:00'),
-(3, 'xyz', 0, 0, 0, 2, '2015-02-21 18:05:22'),
+(6, 'Sri Ram Memorial', 0, 0, 1, 1, '2015-02-21 18:04:00'),
+(3, 'xyz', 0, 0, 2, 2, '2015-02-21 18:05:22'),
 (5, 'EEE', 0, 0, 0, 3, '2015-02-21 18:05:32'),
 (5, 'Mech', 0, 0, 0, 4, '2015-02-21 18:05:38'),
 (3, 'Ghanta placement!!', 0, 0, 0, 5, '2015-02-21 18:14:29'),
@@ -96,7 +94,19 @@ INSERT INTO `tb_answer` (`question_id`, `answer`, `upvote`, `downvote`, `user_id
 (8, 'DEEBA kHANNA', 0, 0, 0, 14, '2015-02-23 05:18:57'),
 (8, 'SELVA', 0, 0, 0, 15, '2015-02-23 05:19:27'),
 (9, '30LACS ', 0, 0, 0, 16, '2015-02-23 05:26:49'),
-(9, '50lacs', 0, 0, 0, 17, '2015-02-23 05:27:45');
+(9, '50lacs', 0, 0, 0, 17, '2015-02-23 05:27:45'),
+(4, '3 to 4 bro...', 0, 0, 0, 18, '2015-03-03 22:18:24'),
+(8, 'Dr. S. Malarvizhi\r\nOur Faculty\r\n', 0, 0, 0, 19, '2015-03-04 02:07:26'),
+(9, '40lacs', 0, 0, 0, 20, '2015-03-19 04:22:06'),
+(0, 'Both are good at placement , you can prefer SRM for better amenities . ', 0, 0, 0, 21, '2015-03-26 04:31:25'),
+(0, 'very bad food ', 0, 0, 9, 22, '2015-03-28 00:52:17'),
+(0, 'Some time it is good some time bad....', 0, 0, 0, 23, '2015-03-28 00:53:13'),
+(0, 'Bakwass bhai...', 0, 0, 7, 24, '2015-03-28 00:55:51'),
+(22, 'Sunday food is good ...', 0, 0, 9, 25, '2015-03-28 00:58:53'),
+(25, 'at least 8.5 for core ....', 0, 0, 9, 26, '2015-03-28 01:01:58'),
+(11, 'Better placement than other colleges....', 0, 0, 6, 27, '2015-03-28 03:43:01'),
+(2, 'mechatronics is also there.', 0, 0, 1, 28, '2015-03-28 03:46:55'),
+(2, 'mechatronics is also there.', 0, 0, 1, 29, '2015-03-28 03:46:55');
 
 -- --------------------------------------------------------
 
@@ -106,27 +116,34 @@ INSERT INTO `tb_answer` (`question_id`, `answer`, `upvote`, `downvote`, `user_id
 
 CREATE TABLE IF NOT EXISTS `tb_question` (
   `question` mediumtext NOT NULL,
-  `question_id` int(11) NOT NULL AUTO_INCREMENT,
+`question_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `answer_bit` int(11) NOT NULL,
-  `question_post_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`question_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Details of the questions posted by user.' AUTO_INCREMENT=10 ;
+  `question_post_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1 COMMENT='Details of the questions posted by user.';
 
 --
 -- Dumping data for table `tb_question`
 --
 
 INSERT INTO `tb_question` (`question`, `question_id`, `user_id`, `answer_bit`, `question_post_date`) VALUES
-('Tell me About SRM University?', 1, 0, 0, '0000-00-00 00:00:00'),
-('What are the branches in SRM University?', 2, 0, 0, '0000-00-00 00:00:00'),
-('What are the placement criteria ?', 3, 0, 0, '0000-00-00 00:00:00'),
-('What is Average Package in SRM?', 4, 0, 0, '2015-02-21 08:31:47'),
-('What are the branches in SRM University?', 5, 0, 0, '2015-02-21 17:53:14'),
-('What is full form of SRM ?', 6, 0, 0, '2015-02-21 18:03:43'),
-('How many Students are there in SRM University?', 7, 0, 0, '2015-02-23 04:40:42'),
-('Who is the Best Faculty in SRM?', 8, 0, 0, '2015-02-23 05:18:02'),
-('Highest Placement in SRM University?', 9, 0, 0, '2015-02-23 05:26:09');
+('Tell me About SRM University?', 1, 1, 0, '2015-03-19 07:00:00'),
+('What are the branches in SRM University?', 2, 2, 0, '2015-03-09 07:00:00'),
+('What are the placement criteria ?', 3, 3, 0, '2015-03-11 07:00:00'),
+('What is Average Package in SRM?', 4, 5, 0, '2015-02-21 08:31:47'),
+('What are the branches in SRM University?', 5, 6, 0, '2015-02-21 17:53:14'),
+('What is full form of SRM ?', 6, 7, 0, '2015-02-21 18:03:43'),
+('How many Students are there in SRM University?', 7, 8, 0, '2015-02-23 04:40:42'),
+('Who is the Best Faculty in SRM?', 8, 9, 0, '2015-02-23 05:18:02'),
+('Highest Placement in SRM University?', 9, 0, 0, '2015-02-23 05:26:09'),
+('Which college is better SRM or VIT??\r\n', 10, 1, 0, '2015-03-26 04:30:07'),
+('Why we should go for SRM University? ', 11, 2, 0, '2015-03-27 21:53:09'),
+('How can we organsize events and workshops in college? Does it requires any experience? ', 12, 0, 3, '2015-03-27 21:56:51'),
+('Tell me about Mess food of SRM University????', 22, 9, 0, '2015-03-28 00:45:46'),
+('How is wifi in campus??', 23, 9, 0, '2015-03-28 00:59:42'),
+('campus area?', 24, 9, 0, '2015-03-28 01:00:18'),
+('How much CGPA is required for placement????', 25, 9, 0, '2015-03-28 01:01:24'),
+('How many companies comes to SRM for placement.?', 26, 6, 0, '2015-03-28 03:43:45');
 
 -- --------------------------------------------------------
 
@@ -136,12 +153,7 @@ INSERT INTO `tb_question` (`question`, `question_id`, `user_id`, `answer_bit`, `
 
 CREATE TABLE IF NOT EXISTS `tb_tags` (
   `tags` varchar(100) NOT NULL,
-  `qid` int(11) NOT NULL,
-  KEY `tags` (`tags`),
-  KEY `tags_2` (`tags`),
-  KEY `qid` (`qid`),
-  KEY `qid_2` (`qid`),
-  KEY `index_tags` (`tags`)
+  `qid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -174,7 +186,7 @@ INSERT INTO `tb_tags` (`tags`, `qid`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `user` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
+`user_id` int(11) NOT NULL,
   `user_name` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL,
   `college_id` int(20) NOT NULL,
@@ -183,17 +195,79 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(40) NOT NULL,
   `no_of_que_posted` int(11) NOT NULL,
   `no_of_ans_posted` int(11) NOT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Details of users.' AUTO_INCREMENT=3 ;
+  `image` longblob NOT NULL,
+  `college` varchar(40) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1 COMMENT='Details of users.';
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `user_name`, `password`, `college_id`, `branch`, `year_of_admission`, `email`, `no_of_que_posted`, `no_of_ans_posted`) VALUES
-(1, 'prabhunath', 'prabhunath', 0, '', '0000-00-00', 'prabhu@gmail.com', 0, 0),
-(2, 'shashi', 'shashi', 0, '', '0000-00-00', 'shashi@gmail.com', 0, 0);
+INSERT INTO `user` (`user_id`, `user_name`, `password`, `college_id`, `branch`, `year_of_admission`, `email`, `no_of_que_posted`, `no_of_ans_posted`, `image`, `college`) VALUES
+(0, 'prabhunath', 'prabhunath', 1031210334, 'CSE', '2012-07-06', 'prabhunath.1245@gmail.com', 1, 1, '', 'SRM University'),
+(1, 'prabhunath', 'prabhunath', 334, 'CSE', '2015-03-01', 'prabhu@gmail.com', 2, 3, '', 'SRM University'),
+(2, 'shashi', 'shashi', 0, '', '0000-00-00', 'shashi@gmail.com', 0, 0, '', ''),
+(3, 'Prabhunath Yadav', 'prabhu', 0, '', '0000-00-00', 'pny@gmai.com', 0, 0, '', ''),
+(4, 'Shashi Shekhar', 'shashi', 0, '', '0000-00-00', 'Shashi@gmail.com', 0, 0, '', ''),
+(5, 'Mohit Bhagwani', 'mohit', 0, '', '0000-00-00', 'mohit@gmail.com', 0, 0, '', ''),
+(6, 'user name', 'user', 1234, 'Mechenical', '0000-00-00', 'user@gmail.com', 2, 1, '', 'Vellore Institute of technology'),
+(7, 'ok', 'ok', 1212, 'cse', '2012-02-02', 'ok', 1, 1, '', 'VIT'),
+(8, 'bhup', 'bhup', 0, '', '0000-00-00', 'bhup', 0, 0, '', ''),
+(9, 'xyz', 'xyz', 334, 'cse', '2008-11-24', 'xyz', 5, 3, '', 'srm');
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `college_details`
+--
+ALTER TABLE `college_details`
+ ADD UNIQUE KEY `branch` (`branch`);
+
+--
+-- Indexes for table `tb_answer`
+--
+ALTER TABLE `tb_answer`
+ ADD UNIQUE KEY `answer_id` (`answer_id`);
+
+--
+-- Indexes for table `tb_question`
+--
+ALTER TABLE `tb_question`
+ ADD PRIMARY KEY (`question_id`);
+
+--
+-- Indexes for table `tb_tags`
+--
+ALTER TABLE `tb_tags`
+ ADD KEY `tags` (`tags`), ADD KEY `tags_2` (`tags`), ADD KEY `qid` (`qid`), ADD KEY `qid_2` (`qid`), ADD KEY `index_tags` (`tags`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tb_answer`
+--
+ALTER TABLE `tb_answer`
+MODIFY `answer_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
+--
+-- AUTO_INCREMENT for table `tb_question`
+--
+ALTER TABLE `tb_question`
+MODIFY `question_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

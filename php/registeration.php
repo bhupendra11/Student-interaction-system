@@ -2,45 +2,27 @@
 session_start();
 error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
-<?php include('header2.php');?>
-
+<?php include('header.php');?>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "iecsis";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-
+	require_once 'connection.php';
 	$name = $_REQUEST['name'];
-   $email = $_REQUEST['email'];
-   $password=$_REQUEST['password'];
-
+    $email = $_REQUEST['email'];
+    $password=$_REQUEST['password'];
    if($name!="" && $email!="" && $password!="")
    {
-$sql = "INSERT INTO user (user_name,password,email) VALUES( '$name','$password','$email')";
-$status=mysql_query($sql);       
-if ($conn->query($sql) === TRUE) {
-
-echo "You are registered successfully!";
-
-}
-else
-{
-echo "failed in registeration";
-}
-}
-else
-{
-echo "fill all the credential!!";
-}
-
-
-
-
-$conn->close();
+	$sql = "INSERT INTO user (user_name,password,email) VALUES( '$name','$password','$email')";
+	$status=mysqli_query($connection,$sql);       
+		if (mysqli_query($sql) === TRUE) 
+		{
+			echo "You are registered successfully!";
+		}
+		else
+		{
+			echo "failed in registeration";
+		}
+	}
+	else
+		{
+			echo "fill all the credential!!";
+		}
 ?>

@@ -5,7 +5,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 <div style="position: fixed; width: 100%;height:13%; background-color: white;">
 <?php include('./mainheader.php');?>
 </div>
-<br /><br /><br /><br /><br />
+
 <table class="tbl">
 <tr width="100%">
 <div style="position: fixed; ">

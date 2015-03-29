@@ -1,38 +1,26 @@
-<<<<<<< HEAD:php/hh.php
-=======
 <?php
 session_start();
 $email=$_SESSION['eml'];
 $password=$_SESSION['pswd'];
-//echo "email=".$email;
-//echo "password=".$password;
 $_SESSION['eml']=$email;
 $_SESSION['password']=$password;
 error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 ?>
->>>>>>> profile.php, css,update profile  presentation changes ;:php/header2.php
 <html>
-
 <head>
-<title>
-My mp project
-
-</title>
-<link rel="stylesheet" type="text/css" href="../css/main1.css"/>
+	<title>
+		IECSIS
+	</title>
+	<link rel="stylesheet" type="text/css" href="../css/main1.css"/>
 </head>
 <body>
 <div id="navbar">
-
 <ul>
-<li class="nohover"><a href="../index.php" ><img src="../images\logo.jpg" style=""></img></a></li>
-
-<li><a> NOTIFICATION</a></li>
-<li><a> CONTACT US</a></li>
-<li><a href="login.html"> LOGIN</a></li>
-<li><a href="register.html">SIGN UP</a></li>
-
-
-
+	<li class="nohover"><a href="../index.php" ><img src="../images\logo.jpg" style=""></img></a></li>
+	<li><a> NOTIFICATION</a></li>
+	<li><a> CONTACT US</a></li>
+	<li><a href="login.html"> LOGIN</a></li>
+	<li><a href="register.html">SIGN UP</a></li>
 </ul>
 </div>
 <div id="tfheader">
@@ -42,7 +30,5 @@ My mp project
 		</form>
 	<div class="tfclear"></div>
 </div>
-
-
 </body>
 </html>
