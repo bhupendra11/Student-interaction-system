@@ -4,11 +4,10 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <?php include('header.php');?>
 <?php
-require_once 'connection.php';
-$query="select * from tb_question order by question_post_date desc";
-$result=mysqli_query($connection,$query);
-echo "<center><table class='tbl1'><tr class='xx'><td>Questions Asked:</td><td>Question Id</td><td>User Id</td><td>Answered Bit</td><td>Post Date</td></tr>";
-
+	require_once 'connection.php';
+	$query="select * from tb_question order by question_post_date desc";
+	$result=mysqli_query($connection,$query);
+	echo "<center><table class='tbl1'><tr class='xx'><td>Questions Asked:</td><td>Question Id</td><td>User Id</td><td>Answered Bit</td><td>Post Date</td></tr>";
 $queno=1;
 while($res=mysqli_fetch_assoc($result))
 {
