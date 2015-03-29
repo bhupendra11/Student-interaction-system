@@ -1,6 +1,9 @@
 <?php
 session_start();
 error_reporting( ~E_NOTICE & ~E_DEPRECATED);
+
+
+
 ?>
 <html>
 
@@ -11,7 +14,6 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"> 
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"> 
-
 
 
 
@@ -33,7 +35,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
                     </li>
                     <li class="active"><a href="../index.php" >
                     <span  class="glyphicon glyphicon-home"></span>Home</a></li>
-                    <li><a><span   class="glyphicon glyphicon-envelope"></span> Notifications <? echo $notif ?></a></li>
+                    <li><a><span   class="glyphicon glyphicon-envelope"></span> Notifications<span class="badge">24</span></a></li>
                     <li><a> <span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
 					<?php
 					if(isset($_SESSION['email']))

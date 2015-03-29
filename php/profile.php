@@ -37,16 +37,6 @@ if($email!="" && $password!="")
 	$row = mysqli_fetch_assoc($result);
 
 
-	/*
-
-	echo "<table style='width:100%; height:10%;'>".
-		"<tr><td><h2 style='color:black;'>Welcome to your Profile             ".
-		"</h2></td> <td><h3 style='color:blue; text-align:left;'>Mr./Mrs. :&nbsp;&nbsp;&nbsp;".strtoupper ($row['user_name']).
-		"</h3></td></tr></table>";
-		echo "<th>";
-
-	*/	
-
 	if($flag)
 	{
 
@@ -77,21 +67,6 @@ for($i=0;$i < 11;$i++)
 }
 
 
-
-
-	echo "
-	<style>
-	#left-block,#mid-block, #right-block
-	{
-		//margin:0px 2px 0px 2px;
-		//border: solid black 1px;
-	}
-
-	</style>
-
-
-
-	";
 
 //-------------------------------------Cover Picture----------------------------
 
@@ -127,49 +102,13 @@ echo "
 ?>
 
 
-<!--
-</td>
-<td style='text-align:right;'>
-<form method="POST" action="update_profile.php">
-<input class='btn' type='submit' value='*Update profile' name="update">
-</form>
-
-
-<form method="POST" action="update_password.php">
-<input class='btn' type='submit' value='*Change Password' name="update_password">
-</form>
-</td>
-</table>
-<hr>
-
--->
-
-
-
-
-
-	<?php
-	//echo "<tr></table>";
-
-
+<?php
+	
 	}
 	else
 	{
 	 include('logout.php');
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //---------------------Below the header and cover picture --------------------------------------------
 
@@ -177,7 +116,7 @@ echo "
 	echo 
 	"<div class='container' >
 
-		<div class='row' >
+		<div class='row-fluid' >
 		  <div id='left-block' class='col-md-3 ' style='height:100% ; '> 
 
 		  <!--<div class='sidebar-nav-fixed affix'> -->
@@ -233,14 +172,8 @@ echo             "
 		                <li class='list-group-item text-right'><span class='pull-left'><strong class=''>Joined</strong></span> 2.13.2014</li>
 		                <li class='list-group-item text-right'><span class='pull-left'><strong class=''>Name</strong></span>".$user_name."</li>
 
-
-
-
 		                <li class='list-group-item text-right'><span class='pull-left'><strong class=''>Branch</strong></span>".$branch."</li>
-		             	
-
-
-
+		           
 		             	<li class='list-group-item text-right'><span class='pull-left'><strong class=''>College </strong></span> ".
 		             	$college
 
@@ -262,8 +195,7 @@ echo             "
 
 		            </ul>
 
-		            </br>
-		            </br>
+		            
 
 		            ";
 
@@ -273,8 +205,8 @@ echo             "
 					//----------------PROFILE COMPLETION PROGRESS BAR---------------------------------
 
 					echo	"
-							<div class='panel panel-default'>
-               					 <div class='panel-heading'>Profile Completion:</div>
+							<div class='panel panel-default active'>
+               					 <div class='panel-heading '>Profile Completion:</div>
                 				<div class='panel-body'> 
                 					<div class='progress'>
 								  		<div class='progress-bar progress-bar-striped active' role='progressbar' ".
