@@ -17,10 +17,12 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 	$result=mysqli_query($connection,$query);
 	$res=mysqli_fetch_assoc($result);
 	$u_id=$res['user_id'];
+	//echo $u_id;
+	$answer=trim($answer);
 	if($answer!="")
 	{
 		$sql="insert into tb_answer (answer,user_id,question_id) values('$answer','$u_id','$queid')";
-		$status=mysqli_query($connection,$sql,$con);
+		$status=mysqli_query($connection,$sql);
 		if ($status === TRUE) 
 		{
 			echo "You answer posted successfully!";

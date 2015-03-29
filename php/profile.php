@@ -32,7 +32,7 @@ if($email!="" && $password!="")
 		$result = mysqli_query($connection,$query);
 		$row = mysqli_fetch_assoc($result);
 		echo "<table style='width:100%; height:10%;'>".
-			"<tr><td><h2 style='color:black;'>Welcome to your Profile             ".
+			"<tr><td><h2 style='color:black;'>Welcome to your Profile ".
 			"</h2></td> <td><h3 style='color:blue; text-align:left;'>Mr./Mrs. :&nbsp;&nbsp;&nbsp;".strtoupper ($row['user_name']).
 			"</h3></td></tr></table>";
 			echo "<th>";

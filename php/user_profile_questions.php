@@ -13,7 +13,7 @@
 		echo "<tr><td ><div style='background-color:green; border-radius:12px;'>Q".$queno."</div> </td><td>".
 				$res['question']."</td> <td style='color:green;font-size:10px;'>Posted @ : ".$res['question_post_date'].
 				"</td> ";
-		echo "<td><form action='answerpost.php' method='get'>  </td><td><a href=answerpost.php?qid=$res[1]&uid=$res[2]>".
+		echo "<td><form action='answerpost.php' method='get'>  </td><td><a href=answerpost.php?qid=$res[question_id]&uid=$res[user_id]>".
 				"<input class='btn' ".
 				" type=button value='Post Answer' name=send /> </a>".
 				"</form></td></tr>"; 

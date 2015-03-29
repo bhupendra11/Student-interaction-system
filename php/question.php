@@ -14,6 +14,7 @@
 	$res=mysqli_fetch_assoc($result);
 	$u_id=$res['user_id'];
 	$question = $_REQUEST['que'];
+	$question=trim($question);
 	$words = explode(" ",$question);
 	$stop_word[]=array("able","between","why","how","to","whom","where as","from","into","inward","is","isn't","our","ours","ourselves","out","outside","over","overall","own","what","you'll","your","you're","yours","yourself","yourselves","you've");
 	if($question!="" )
