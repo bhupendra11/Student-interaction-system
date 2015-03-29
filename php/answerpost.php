@@ -9,12 +9,15 @@ $username = "root";
 $password = "";
 $dbname = "iecsis";
     $email=$_SESSION['email'];
-	echo "Write your Answer :@".$email;
+	
 	
 	$queid = $_REQUEST['qid'];
     $uid=$_REQUEST['uid'];
     $_SESSION['email1']=$email;
 	
+	if($email!="")
+	{
+	echo "Write your Answer :@".$email;
 	session_start();
 	$conn =  mysql_connect($servername, $username, $password);
 	mysql_select_db($dbname);
@@ -32,6 +35,8 @@ echo "<tr><td>Que.. " .$res[0]."</td><td>".$res[1]."</td> <td>".$res[2]."</td> <
 }
 echo "</table>"	;
 
+
+
 ?>
 <h3 style="color:black; text-align:left;">Answer:</h3>
 <center>
@@ -46,3 +51,13 @@ echo "</table>"	;
 </form>
 </table>
 </center>
+<?php
+
+}
+else
+{
+ echo "<h3 style='color:red;'>please login to post question or answer.</h3>";
+}
+
+
+?>

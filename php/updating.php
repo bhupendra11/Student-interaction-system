@@ -19,7 +19,7 @@ $email = $_SESSION['email'];
    $college_name=$_REQUEST['college_name'];
    $college_id=$_REQUEST['college_id'];
    $branch=$_REQUEST['branch'];
-   $year_of_admission=$_REQUEST['year_of_addmission'];
+   $year_of_admission=$_REQUEST['year_of_admission'];
    $profile_pic=$_REQUEST['profile_pic'];
    
   

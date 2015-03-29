@@ -8,15 +8,25 @@ include("header2.php");
 ?>
 <?php  
  require('connect.php');
-$_SESSION['email']=$_REQUEST['email'];
+
 $email = $_REQUEST['email'];
 $password = $_REQUEST['password'];
 $_SESSION['pswd']=$password;
-
-if(isset($_SESSION['pswd']) && isset($_SESSION['email'])) 
+$_SESSION['email']=$email;
+$_SESSION['eml']=$_REQUEST['email'];
+//if(isset($_SESSION['pswd']) && isset($_SESSION['email'])) 
+//{
+//$password=$_SESSION['pswd'];
+//}
+if($email=="" || $password=="")
 {
-$password=$_SESSION['pswd'];
+$email=$_SESSION['eml'];
+$password=$_SESSION['password'];
 }
+
+
+//echo "email=".$email;
+//echo "password=".$password;
 
 $query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
  $result = mysql_query($query) or die(mysql_error());
@@ -118,8 +128,8 @@ else
 echo "<table style='width:100%;'> <tr> <td style='width:20%;'> <div style='width:90%;'>".
 	"<p style='color:blue; text-align:center;'><u><b>Profile Details:</b></u></p>".
 
-" <table>
-		<hr><tr><td>Your Name:		 </td><td> ".strtoupper ($row['user_name'])."</td></tr>".
+" <table style='background-color:#c3dfef; opacity:0.5;'>
+		<hr><tr><td>Name:		 </td><td> ".strtoupper ($row['user_name'])."</td></tr>".
 		"<tr><td>Branch:   		</td><td> ".strtoupper ($row['branch'])."</td></tr> ".
 	    "<tr><td> College: 		</td><td>".strtoupper ($row['college'])."</td></tr>".
 		"<tr><td>College Id:	</td><td> ".$row['college_id']."</td></tr>".

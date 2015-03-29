@@ -33,7 +33,7 @@ $email=$_SESSION['email'];
 
 <tr>
 <td style='text-align:center;padding:12px;'>Year Of Adminssion</td>
-<td><input class='formbtn' type='text' name='year_of_admission'> e.g:(1994-08-06)(yyyy-mm-dd)</td>
+<td><input class='formbtn' type='date' name='year_of_admission'> e.g:(1994-08-06)(yyyy-mm-dd)</td>
 <!--
 
 <input class='formbtn' type=date  min=1888-01-01 name='year_of_admission'>
