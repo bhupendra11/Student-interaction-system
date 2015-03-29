@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 
 
@@ -49,8 +49,8 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 					else
 					{
 					?>
-					<li><a href="../html/login.html"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-					<li><a href="../html/register.html"><span class="glyphicon glyphicon-pencil"></span>Sign Up</a></li>
+					<li><a href="../html/login.php"> <span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="../html/register.php"><span class="glyphicon glyphicon-pencil"></span>Sign Up</a></li>
 					<?php 
 					}
 					?>
