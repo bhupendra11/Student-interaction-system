@@ -1,4 +1,4 @@
-<div style="width:100%;height:25%;background-color:#e2e2e2;position: relative; opacity:0.">
+<div style="width:100%;height:25%;background-color:#e2e2e2;position: relative; ">
 <!-- Social Footer, Colour Matching Icons -->
 <!-- Include Font Awesome Stylesheet in Header -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -21,4 +21,5 @@
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </div>
+</body>
 </html>
