@@ -1,20 +1,22 @@
 <?php
 	require_once '../php/connection.php';
 	require_once '../php/session.php';
+	//first person verification then move to profile.php and taking only email in session to switch to other pages
 	if(isset($_POST['Login'])){
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
-	$result = mysqli_query($connection,$query) or die(mysql_error());
-	$count = mysqli_num_rows($result);
-	if($count==1){
-		$_SESSION['email']=$email;
-		header("Location:../php/profile.php");
+		$email = $_POST['email'];
+		$password = $_POST['password'];
+		$query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
+		$result = mysqli_query($connection,$query) or die(mysql_error());
+		$count = mysqli_num_rows($result);
+		if($count==1){
+			$_SESSION['email']=$email;
+			header("Location:../php/profile.php");
+		}
+		else{
+			echo "Enter properly";
+		}
 	}
-	else{
-		echo "Enter properly";
-	}
-	}
+	//verification coding ended.
 ?>
 <html>
 <head>
@@ -32,6 +34,7 @@
 	<h2 style="color:black;">
 		Login Form
 	</h2>
+	<!-- login form coding-->
 	<table class="formtbl">
 		<form action="../html/login.php" method="POST">
 		<tr>
@@ -48,6 +51,7 @@
 		</tr>
 		</form>
 	</table>
+	<!--login coding ended-->
 	</center>
 </div>
 	<div id="foot" style="clear:both;">
