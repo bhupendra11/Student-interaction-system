@@ -6,13 +6,13 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 <div>
 	<table class="tbl">
 		<tr width="100%">
-			<td width="20%" style="background-color:#c3dfef;">
+			<td width="20%" style="background-color:#c3dfef;position: fixed;height:100%">
 			<center>
-				<ul style="text-align:left;">
-					<li><a href="question.html">Post Questions</a></li>
-					<li><a href="answer.php">Post Answer</a></li>
-					<li><a href="preview.php">Preview Question & Answer post!!</a></li>
-				</ul>
+				<ul style="margin-top:50%;list-style: none;margin-left:-15%;">
+<li><a href="html/question.html" class="list-group-item active" style="margin-bottom: 2%;">Post Questions</a></li>
+<li><a href="php/answer.php" class="list-group-item active" style="margin-bottom: 2%;">Post Answer</a></li>
+<li><a href="php/preview.php" class="list-group-item active" style="margin-bottom: 2%;" >Preview Question and Answer post!!</a></li>
+</ul>
 			</center>
 			</td>
 			<td width="60%" height="60%">
@@ -86,13 +86,32 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <!--                                                 HTML HOMESTUFFS                                              -->
 </td>
-<td width="20%" style="background-color:#c3dfef;">
+<td width="20%" style="background-color:#c3dfef;position:fixed;height:100%;">
 </td>
 </tr>
 </table>
 </div>
 	<div id="footer1" style="clear:both;">
-	  <center> <B>CONTACT US</B></center> 
+<div style="width:100%;height:25%;background-color:#e2e2e2;position: relative; ">
+<!-- Social Footer, Colour Matching Icons -->
+<!-- Include Font Awesome Stylesheet in Header -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- // -->
+<div class="container">
+        <div class="text-center center-block"></div>
+           <center> <br />
+                <a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+	            <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+                </center>
+</div>
+    
+</div>
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</div>
 	</div>
 
 </body>
