@@ -5,6 +5,8 @@
 
 ?>
 <?php include("header.php"); ?>
+
+<!-- session[email] is maintained on every pages-->
 <?php  	
 	require_once 'connection.php';
 	$flag=false;
@@ -29,11 +31,9 @@
 
 	?>
 
-
+<!--$attribute variable contains the attribute of the user table because res[0] does not work-->
 	<?php 
 			$attribute = array('user_id','user_name','password','college_id','branch','year_of_admission','email','no_of_que_posted','no_of_ans_posted');
-
-
 
 	for($i=0;$i < 11;$i++)
 	{
@@ -301,7 +301,7 @@
 		}
 
 
-	
+	 
 		include('footer.php');
 
 ?>

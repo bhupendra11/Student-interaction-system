@@ -1,9 +1,6 @@
 <?php
 //session_start();
 error_reporting( ~E_NOTICE & ~E_DEPRECATED);
-
-
-
 ?>
 <html>
 

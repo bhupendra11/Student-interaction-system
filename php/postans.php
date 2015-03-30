@@ -4,8 +4,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <?php include('header.php');?>
 <?php
-	$email=$_SESSION['email1'];
-	$_SESSION['email']=$email;
+	$email=$_SESSION['email'];
 	echo "@".$email;
 ?>
 <?php
