@@ -34,7 +34,7 @@
 	<h2 style="color:black;">
 		Login Form
 	</h2>
-	<!-- login form coding-->
+	<!--                                              login form coding                                                             -->
 	<table class="formtbl">
 		<form action="../html/login.php" method="POST">
 		<tr>
@@ -51,7 +51,7 @@
 		</tr>
 		</form>
 	</table>
-	<!--login coding ended-->
+	<!--                                              login coding ended                                                                -->
 	</center>
 </div>
 	<div id="foot" style="clear:both;">
