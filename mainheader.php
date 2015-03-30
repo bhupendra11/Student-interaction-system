@@ -62,4 +62,4 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
         </div>
      </div>
 </div>
-<body style="margin-top:80px;">
+<body style="margin-top:auto;">
