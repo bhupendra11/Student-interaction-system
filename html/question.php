@@ -1,4 +1,5 @@
-
+<?php require_once '../php/session.php';?>
+<?php confirm_logged_in();?>
 <html>
 <head>
 	<title>
@@ -9,7 +10,7 @@
 		.xx
 		{
 			background-color:#366b82;
-			color:white;
+			color:black;
 		}
 		.tbl
 		{
@@ -18,22 +19,7 @@
 	</style>
 </head>
 <body>
-<div id="navbar">
-	<ul>
-		<li class="nohover"><a href="../index.php" ><img src="../images\logo.jpg" style=""></img></a></li>
-		<li><a> NOTIFICATION</a></li>
-		<li><a> CONTACT US</a></li>
-		<li><a href="login.html"> LOGIN</a></li>
-		<li><a href="register.html">SIGN UP</a></li>
-	</ul>
-</div>
-<div id="tfheader">
-		<form  id="tfnewsearch" action="../php/getsearchresult.php" method="post">
-				<input class="tftextinput" type="textbox" name="search" />
-			    <input class="tfbutton" type="submit" value="Search" name="submit"/>
-		</form>
-	<div class="tfclear"></div>
-</div>
+	<?php include('../php/header.php');?>
 <center>
 	<table  class="tbl">
 		<th>Write your Question?</th>
