@@ -2,7 +2,7 @@
 require_once 'connection.php';
 $query="select * from tb_question order by question_post_date desc";
 $result=mysqli_query($connection,$query);
-echo "<center><table style='margin-top:-150px;'><tr class='xx'><td>Recent Questions Posted:</td><td>Question Id</td>".
+echo "<center><table style='margin-top:-300px;'><tr class='xx'><td>Recent Questions Posted:</td><td>Question Id</td>".
 		"<td>Post Date</td></tr>";
 $queno=1;
 while($res=mysqli_fetch_assoc($result))
