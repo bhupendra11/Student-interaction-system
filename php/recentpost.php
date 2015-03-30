@@ -1,4 +1,5 @@
 <?php
+
 	require_once 'connection.php';
 	$query="select * from tb_question order by question_post_date desc";
 	$result=mysqli_query($connection,$query);
@@ -15,4 +16,5 @@
 		$queno++;
 	}
 	echo "</table></center>";
+
 ?>
