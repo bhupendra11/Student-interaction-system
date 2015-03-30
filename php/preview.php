@@ -28,9 +28,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 			"<td>UserID</td><td>PostDate</td></tr>";
 		echo "<tr><td class='question'>".$res['question']."</td><td>".$res['question_id']."</td>".
 			"<td>".$res['user_id']."</td><td>".$res['question_post_date']."</td></tr>";
-		echo "<tr><td class='question'>".$res['question']."</td><td>".$res['question_id']."</td>".
-			"<td>".$res['user_id']."</td><td style='color:green; ".
-			"font-size:12px;'@>".$res['question_post_date']."</td></tr>";
+		
 		echo "</table></center><center><table class='ans'>".
 		"<tr><td>Question_ID</td><td>Answer</td> <td>USERID</td><td>POST DATE</td><td></td></tr>";
 		$query2="select * from tb_answer where question_id=$res[question_id] order by answer_post_date desc ";
@@ -42,8 +40,6 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 			{
 				if(str_word_count($res2['answer']<20));
 				{
-					echo "<tr><td>".$res2['question_id']."</td><td class='answer'>".$res2['answer']."</td><td>".$res2['user_id'].
-						"</td><td>".$res2['answer_post_date']."</td><td><input class='upvote' type='submit' value='+'></td></tr>";
 					echo "<tr><td>".$res2['question_id']."</td><td class='answer'>".$res2['answer']."</td><td>".$res2['user_id'].
 						"</td><td style='color:green; font-size:12px;'>@".$res2['answer_post_date']."</td><td><input class='upvote1' type='submit' value='+'></td></tr>";
 					$no_of_ans++;

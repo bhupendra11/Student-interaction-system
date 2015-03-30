@@ -5,6 +5,7 @@
 
 ?>
 <?php include("header.php"); ?>
+
 <!-- session[email] is maintained on every pages-->
 <?php  	
 	require_once 'connection.php';
