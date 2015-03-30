@@ -40,11 +40,7 @@
 	</h2>
 	<!--                                              login form coding                                                             -->
 	<table class="formtbl">
-=======
-	
-	
-	  <table class="formtbl">
->>>>>>> 31374c2e4f545276a59bec5064fe9b4ed19cc195
+
 		<form action="../html/login.php" method="POST">
 		<tr>
 			<td style="color:black; ">Email</td>
@@ -59,14 +55,10 @@
 			<td><input class='btn' type="submit" value="Login" name="Login"></input></td>
 		</tr>
 		</form>
-<<<<<<< HEAD
-	</table>
-	<!--                                              login coding ended                                                                -->
-	</center>
-=======
+
 	</table>    
 	
-</div>	-->
+
 
 <!--login coding ended-->
 
@@ -106,8 +98,6 @@
         </div>
     </div>
 </form>
-
->>>>>>> 31374c2e4f545276a59bec5064fe9b4ed19cc195
 </div>
 
 
