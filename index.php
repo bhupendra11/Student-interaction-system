@@ -12,7 +12,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 <td width="20%" style="background-color:#c3dfef;style="position: fixed;" >
 <center>
 <ul style="text-align:left;">
-<li><a href="html/question.html">Post Questions</a></li>
+<li><a href="html/question.php">Post Questions</a></li>
 <li><a href="php/answer.php">Post Answer</a></li>
 <li><a href="php/preview.php">Preview Question and Answer post!!</a></li>
 </ul>
