@@ -30,7 +30,6 @@
 		{
 
 	?>
-
 <!----------$attribute variable contains the attribute of the user table because res[0] does not work------------>
 	<?php 
 			$attribute = array('user_id','user_name','password','college_id','branch','year_of_admission','email','no_of_que_posted','no_of_ans_posted');
@@ -106,15 +105,18 @@
 			<div class='row-fluid' >
 			  <div id='left-block' class='col-md-3 ' style='height:100% ; '> 
 
-			  <!--<div class='sidebar-nav-fixed affix'> -->
+			  <!--<div class='sidebar-nav-fixed affix'> -->";
+			  		if($row['image']){ $user_image=$row['image'];}
+			             	else{$user_image="../images/prof-img.jpg" ;  }
 
-					  <img src='../images/prof-img.jpg' class='img-rounded centered' style='border:solid #888888 1px;' alt='Your Profile Image' width='220' height='170'>";
+				echo	 " <img src=\"".$user_image."\"class='img-rounded centered' style='border:solid #888888 1px;' alt='Your Profile Image' width='220' height='170'>";
 
 
 					  
 
 
 	//-------------------------CHECK PROFILE DETAILS-------------------
+
 			if($row['user_name']){ $user_name=strtoupper ($row['user_name']);}
 			             	else{$user_name="NA" ;  }
 
