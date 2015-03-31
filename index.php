@@ -27,7 +27,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 <div class='bodywrap'>
         <div class='left' style="margin-top: -2%;"  >
 <ul style="margin-top:50%;list-style: none;margin-left:-15%;">
-<li><a href="html/question.html" class="list-group-item active" style="margin-bottom: 2%;">Post Questions</a></li>
+<li><a href="html/question.php" class="list-group-item active" style="margin-bottom: 2%;">Post Questions</a></li>
 <li><a href="php/answer.php" class="list-group-item active" style="margin-bottom: 2%;">Post Answer</a></li>
 <li><a href="php/preview.php" class="list-group-item active" style="margin-bottom: 2%;" >Preview Question and Answer post!!</a></li>
 </ul>

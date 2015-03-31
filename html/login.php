@@ -39,24 +39,7 @@
 		Login Form
 	</h2>
 	<!--                                              login form coding                                                             -->
-	<table class="formtbl">
-
-		<form action="../html/login.php" method="POST">
-		<tr>
-			<td style="color:black; ">Email</td>
-			<td><input name='email' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="text"></input></td>
-		</tr>
-		<tr>
-			<td style="color:black;">Password</td>
-			<td><input name='password' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="password"></input></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><input class='btn' type="submit" value="Login" name="Login"></input></td>
-		</tr>
-		</form>
-
-	</table>    
+  
 	
 
 
