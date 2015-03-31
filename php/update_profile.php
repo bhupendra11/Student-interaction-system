@@ -52,7 +52,6 @@ $email=$_SESSION['email'];
 <center>
 		</br><h2>Update Profile Form</h2></br></br>
 </center>
-
 <form class="form-horizontal" action='updating.php' method='POST' enctype="multipart/form-data">
  	<div class="form-group">
             <label class="control-label col-lg-offset-2 col-lg-2" for="inputEmail">Email:</label>
@@ -83,8 +82,6 @@ $email=$_SESSION['email'];
             <div class="col-lg-4">
                 <input name='year_of_admission' type="text" class="form-control" id="date" placeholder="date">
             </div>
-
-
     </div>
    
     <div class="form-group">
@@ -100,11 +97,12 @@ $email=$_SESSION['email'];
 
 
     <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-  <input class="span2" size="16" type="text" value="12-02-2012">
-  <span class="add-on"><i class="icon-th"></i></span>
-</div>
+		  <input class="span2" size="16" type="text" value="12-02-2012">
+		  <span class="add-on"><i class="icon-th"></i></span>
+	</div>
     <div class="form-group">
         <div class="col-lg-offset-4 col-lg-6">
             <button type="submit" class="btn btn-primary" value="Update" name="Update" >Update</button>
         </div>
     </div>
+</form>

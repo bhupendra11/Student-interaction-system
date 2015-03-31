@@ -122,3 +122,27 @@ function validate_all(output){
     }
     return true;
 }
+
+
+
+// for validation
+
+function validate()
+{
+	 
+      
+     var x = document.forms["LoginForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+	var x = document.forms["LoginForm"]["password"].value;
+    if (x == null || x == "") {
+        alert("Enter your password.");
+        return false;
+    }
+   
+  
+}

@@ -24,23 +24,20 @@
 		IECSIS
 	</title>
 	<link rel="stylesheet" type="text/css" href="../css/main1.css"/>
-	<script src="../js/script.js"></script>
+	<script src="../js/main.js"></script>
+	
 </head>
 <body>
 	
 <?php include('../php/header.php');?>
-
-<!-- login form coding-->
 <!--
+<<<<<<< HEAD
 <div class="container">
 <<<<<<< HEAD
 	<center>
 	<h2 style="color:black;">
 		Login Form
 	</h2>
-	<!--                                              login form coding                                                             -->
-  
-	
 
 
 <!--login coding ended-->
@@ -55,11 +52,11 @@
 
 
 
-<form class="form-horizontal" action="../html/login.php" method="POST">
+<form class="form-horizontal" action="../html/login.php" method="POST" name="myForm" onsubmit="return(validateLogin());" >
     <div class="form-group">
         <label for="inputEmail" class="control-label col-lg-offset-2 col-lg-2">Email</label>
         <div class="col-lg-4">
-            <input name='email' type="email" class="form-control" id="inputEmail" placeholder="Email">
+            <input  name='email' type="email" class="form-control" id="inputEmail" placeholder="Email">
         </div>
     </div>
     <div class="form-group">

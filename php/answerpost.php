@@ -50,9 +50,9 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 
 ?>
 <!-- for answer part -->
-
+<script src="../js/main.js"></script>
 <div class="container">
-<form class="form-horizontal" action="postans.php" method="post">
+<form class="form-horizontal" action="postans.php" method="post" name="myForm" onsubmit="return(validatePostingAnswer());">
 	<div class="form-group">
 	            <h3><label class="control-label col-lg-1" for="Answer">Answer:</label></h3></br></br>
 	            <div class="col-lg-12">

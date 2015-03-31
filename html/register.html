@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<title>Registration
+</title>
+<link rel="stylesheet" type="text/css" href="../css/main1.css"/>
+<script src="../js/script.js"></script>
+<style>
+#foot{
+	width:100%;
+	height:100px;
+	background-color:#366b82;
+	margin-top:180px;
+}
+.formtbl
+	{
+		width:40%;
+		height:30%;
+		border-radius:12px;
+		text-align:left;
+		border:1px solid white;
+		background-color:#366b82;
+	}
+</style
+</head>
+<body>
+<div id="navbar">
+	<ul>
+		<li class="nohover"><a href="../index.php" ><img src="../images\logo.jpg" style=""></img></a></li>
+		<li><a> NOTIFICATION</a></li>
+		<li><a> CONTACT US</a></li>
+		<li><a href="login.html"> LOGIN</a></li>
+		<li><a href="register.html">SIGN UP</a></li>
+	</ul>
+</div>
+<div id="tfheader">
+		<form  id="tfnewsearch" action="../php/getsearchresult.php" method="post">
+				<input class="tftextinput" type="textbox" name="search" />
+			    <input class="tfbutton" type="submit" value="Search" name="submit"/>
+		</form>
+	<div class="tfclear"></div>
+</div>
+<div class="container">
+<center>
+	<h2 style="color:black;">Registration Form</h2>
+	<table class="formtbl">
+		<form name="LoginForm" onsubmit="return(validate());" action="../php/register.php" method="POST">
+		<tr>
+			<td style="color:black;">Full Name/User Name</td>
+			<td><input name='name' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="text"></input></td>
+		</tr>
+		<tr>
+			<td style="color:black; ">Email Id</td>
+			<td><input name='email' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="text"></input></td>
+		</tr>
+		<tr>
+			<td style="color:black;">Create Password</td>
+			<td><input name='password' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="password"></input></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input style="color:white;width:150px; height:25px; border:1px solid white;border-radius:12px; background-color:gray;" type="submit" value="Register"></input></td>
+		</tr>
+		</form>
+	</table>
+	<p style='color:red;'>*Do not forget the password</p>
+</center>
+</div>
+	<div id="foot" style="clear:both;">
+	  <center> <B>@CONTACT US</B></center>
+	</div>
+
+</body>
+</html>
