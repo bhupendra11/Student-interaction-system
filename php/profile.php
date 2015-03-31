@@ -5,16 +5,17 @@
 <?php include("header.php"); ?>
 <?php  
 require_once 'connection.php';
-$email = $_REQUEST['email'];
-$password = $_REQUEST['password'];
-$_SESSION['pswd']=$password;
+$email = $_POST['email'];
+$password = $_POST['password'];
+$_SESSION['password']=$password;
 $_SESSION['email']=$email;
-$_SESSION['eml']=$_REQUEST['email'];
 if($email=="" || $password=="")
 {
-	$email=$_SESSION['eml'];
-	$password=$_SESSION['password'];
+	$email=$_SESSION['email1'];
+	$password=$_SESSION['password1'];
 }
+//echo "pEmail=".$email;
+//echo "pPassword=".$password;
 $query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
 $result = mysqli_query($connection,$query) or die(mysql_error());
 $count = mysqli_num_rows($result);
