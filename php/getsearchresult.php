@@ -69,13 +69,27 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 						$res2=mysqli_fetch_assoc($rr);
 						echo htmlentities("Que..     ".$question_found['question'])."</td><td class='post_date'>Posted @ ".($question_found['question_post_date'])." By:<b>".($res2[0])."</b></td>";
 						
-						echo "<hr></tr></table></center>";
+						echo "<hr style='display: block;
+    content: $;
+    height: 30px;
+     padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;'></tr></table></center>";
 						$answer_query = "select * from tb_answer where question_id='{$sorted[$j]}'";
 						$answer_result_set = mysqli_query($connection,$answer_query);
 						while($answer_found = mysqli_fetch_assoc($answer_result_set)){
 						echo "<center><table class='ans'><tr><td>";
 							echo htmlentities("Ans..    ".$answer_found['answer'])."<td class='post_date'>Posted @ ".$answer_found['answer_post_date']."</td>";
-							echo "</td></tr></table></center><hr width='80%'></hr>";
+							echo "</td></tr></table></center><hr width='80%' style=' height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);'></hr>";
 						}
 						
 					}
@@ -113,7 +127,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </div>
-	</div>
+	
 
 </body>
 </html>
