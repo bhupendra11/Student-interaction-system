@@ -3,7 +3,7 @@
 <center>
 	<h2 style="color:black;">Registration Form</h2>
 	<table class="formtbl">
-		<form action='../php/register.php' method='POS'>
+		<form action='../php/register.php' method='POST'>
 		<tr>
 			<td style="color:black;">Full Name/User Name</td>
 			<td><input name='name' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="text"></input></td>

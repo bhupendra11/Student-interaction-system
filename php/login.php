@@ -25,7 +25,6 @@
 	</title>
 	<link rel="stylesheet" type="text/css" href="../css/main1.css"/>
 	<script src="../js/script.js"></script>
-	
 </head>
 <body>
 	
@@ -37,7 +36,7 @@
 	</h2>
 	<!-- login form coding-->
 	<table class="formtbl">
-		<form name="LoginForm" onsubmit="return(validate());" action="../html/login.php" method="POST" >
+		<form action="../html/login.php" method="POST">
 		<tr>
 			<td style="color:black; ">Email</td>
 			<td><input name='email' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="text"></input></td>
