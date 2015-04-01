@@ -8,7 +8,7 @@ $email=$_SESSION['email'];
 ?>
 
     
-<!--      OLD     *****************
+<!--      
 
 <center>
 		<h2>Update Profile Form</h2>
@@ -48,39 +48,45 @@ $email=$_SESSION['email'];
 
 
 -->
+<?php   
+			require_once 'connection.php';
+			$user_detail_query="select * from user where email='$email'";
+			$user_result=mysqli_query($connection,$user_detail_query);
+			$user_res=mysqli_fetch_assoc( $user_result);
 
+?>
 <center>
 		</br><h2>Update Profile Form</h2></br></br>
 </center>
 <form class="form-horizontal" action='updating.php' method='POST' enctype="multipart/form-data">
  	<div class="form-group">
-            <label class="control-label col-lg-offset-2 col-lg-2" for="inputEmail">Email:</label>
+            <label class="control-label col-lg-offset-2 col-lg-2" for="inputEmail">User Name:</label>
             <div class="col-lg-4">
-                <input name='email' type="email" class="form-control" id="inputEmail" placeholder="Email">
+                <input value="<?php echo $user_res['user_name'];?>" name='user_name' type="text" class="form-control" id="inputEmail" placeholder="Email">
             </div>
     </div>
 	<div class="form-group">
             <label class="control-label col-lg-offset-2 col-lg-2" for="collegeName">College Name:</label>
             <div class="col-lg-4">
-                <input name='college_name' type="text" class="form-control" id="collegeName" placeholder="College Name">
+                <input value="<?php echo $user_res['college'];?>" name='college_name' type="text" class="form-control" id="collegeName" placeholder="College Name">
             </div>
     </div>
     <div class="form-group">
             <label class="control-label col-lg-offset-2 col-lg-2" for="collegeId">College Id:</label>
             <div class="col-lg-4">
-                <input name='college_id' type="text" class="form-control" id="collegeId" placeholder="College Id">
+                <input value="<?php echo $user_res['college_id'];?>"  name='college_id' type="text" class="form-control" id="collegeId" placeholder="College Id">
             </div>
     </div>
     <div class="form-group">
             <label class="control-label col-lg-offset-2 col-lg-2" for="branch">Branch:</label>
             <div class="col-lg-4">
-                <input name='branch' type="text" class="form-control" id="branch" placeholder="Branch">
+                <input value="<?php echo $user_res['branch'];?>" name='branch' type="text" class="form-control" id="branch" placeholder="Branch">
             </div>
     </div>
     <div class="form-group">
             <label class="control-label col-lg-offset-2 col-lg-2" for="branch">Date:</label>
             <div class="col-lg-4">
-                <input name='year_of_admission' type="text" class="form-control" id="date" placeholder="date">
+                <input value="<?php echo $user_res['year_of_admission'];?>" name='year_of_admission' type="text" class="form-control" id="date" placeholder="date">
             </div>
     </div>
    
