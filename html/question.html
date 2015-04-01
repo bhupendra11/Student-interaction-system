@@ -34,10 +34,11 @@
 		</form>
 	<div class="tfclear"></div>
 </div>
+<script src="../js/main.js"></script>
 <center>
 	<table  class="tbl">
 		<th>Write your Question?</th>
-			<form action="../php/question.php" method="post">
+			<form action="../php/question.php" method="post" name="myForm" onsubmit="return(validatePostingQuestion());">
 			<tr class='xx'>
 				<td >Write Your Question Here:</td
 			</tr>

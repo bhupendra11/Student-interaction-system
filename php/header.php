@@ -11,7 +11,9 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"> 
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"> 
-	
+	<script src="../js/bootstrap-datepicker.js"></script>
+
+
 
 
 </head>
@@ -52,7 +54,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 					}
 					?>
  				</ul>              
-				<form class="form-search" action="./php/getsearchresult.php" method="post">
+				<form class="form-search" action="./getsearchresult.php" method="post">
 					<div class="">
 						<div class="input-group col-lg-3 pull-right" style="margin-top:10px;">
 							<input type="text" class="form-control" placeholder="Search for..." name="search" >

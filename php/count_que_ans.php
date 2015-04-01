@@ -4,7 +4,6 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <?php
 	$email=$_SESSION['email'];
-	//$_SESSION['email']=$email;
 	require_once 'connection.php';
 	$query="select * from user where email='$email' ";
 	$result=mysqli_query($connection,$query);

@@ -31,10 +31,10 @@
 
 	?>
 
-<!--$attribute variable contains the attribute of the user table because res[0] does not work-->
+<!----------$attribute variable contains the attribute of the user table because res[0] does not work------------>
 	<?php 
 			$attribute = array('user_id','user_name','password','college_id','branch','year_of_admission','email','no_of_que_posted','no_of_ans_posted');
-
+//-----------------------------------PROFILE COMPLETION PROGRESS BAR coding ---------------------------------
 	for($i=0;$i < 11;$i++)
 	{
 		if($i !=7 && $i!=8 && $i!=3)
@@ -53,8 +53,7 @@
 		}
 	}
 
-
-
+//--------------------------------------------ending--------------------------------
 	//-------------------------------------Cover Picture----------------------------
 
 	/*
@@ -187,7 +186,7 @@
 			            ";
 
 
-						$counter =  $counter *10;
+						//$counter =  $counter *10;
 						
 						//----------------PROFILE COMPLETION PROGRESS BAR---------------------------------
 
@@ -196,10 +195,8 @@
 	               					 <div class='panel-heading '>Profile Completion:</div>
 	                				<div class='panel-body'> 
 	                					<div class='progress'>
-									  		<div class='progress-bar progress-bar-striped active' role='progressbar' ".
-									  		"aria-valuenow=".$counter. " aria-valuemin='0' aria-valuemax='100' style='width:".$counter."px'>" .
-									   		 $counter ."%" .
-									  		"</div>
+									  		
+											<div class='progress-bar progress-bar-striped active' role='progressbar'><progress style=';background-color:green;  width:222px;'  value='$counter' max='10'></progress></div>
 										</div>
 
 	                				</div>
