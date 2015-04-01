@@ -7,7 +7,7 @@
 $email=$_SESSION['email'];
 ?>
 
-
+    
 <!--      OLD     *****************
 
 <center>
@@ -90,6 +90,12 @@ $email=$_SESSION['email'];
                 <input name='password' type="password" class="form-control" id="inputPassword" placeholder="Password">
             </div>
     </div>
+                                                    <!--IMAGE Upload-->
+
+    <input type="file" name="fileToUpload" id="fileToUpload">
+                                                        <!--Image--> 
+
+
     <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
 		  <input class="span2" size="16" type="text" value="12-02-2012">
 		  <span class="add-on"><i class="icon-th"></i></span>

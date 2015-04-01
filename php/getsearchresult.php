@@ -16,8 +16,9 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 			</center>
 			</td>
 			<td width="60%" height="60%">
-//------------------------------------------SEARCHING---------------------------------------				
+				
 <?php
+ 	 	//------------------------------------------SEARCHING---------------------------------------
 	error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING & ~E_DEPRECATED);
 	require_once 'connection.php';
 	$c_count=0;
