@@ -21,18 +21,18 @@
 <body>
 	<?php include('../php/header.php');?>
 <center>
-	<table  class="tbl">
-		<th>Write your Question?</th>
+	<table  class="tbl" style="background-color:  #e7e7e7;">
+		<th >Write your Question?</th>
 			<form action="../php/question.php" method="post">
 			<tr class='xx'>
-				<td >Write Your Question Here:</td
+				<td style="background-color:  #e7e7e7;">Write Your Question Here:</td
 			</tr>
 			<tr class="xx">
-				<td> <textarea rows='15' cols='150' type="text" name="que"></textarea></td>
+				<td> <textarea rows='15' cols='160'  name="que" style="border-color: #e7e7e7;"></textarea></td>
 			</tr>
 			<tr>
 				<td></td>
-				<td class='xx'> <input style="color:white;width:200px; height:35px; border:1px solid white;border-radius:12px; background-color:gray;" type="submit" value="Post My Question!" ></input></td>
+				<td > <input style="color:white;margin-left:-100%; height:35px; border:1px solid white;border-radius:12px;background-color: #337ab7;" type="submit" value="Post My Question!" ></input></td>
 			</tr>
 			</form>
 	</table>

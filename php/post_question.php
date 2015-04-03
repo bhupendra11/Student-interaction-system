@@ -4,8 +4,19 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <?php include('header.php');?>
 <?php
+
+
 	$email=$_SESSION['email'];
 	$_SESSION['email']=$email;
+	if($email=="")
+	{
+		header("Location:../php/login.php");
+	
+	}
+	
+	
+	
+	
 	echo "@".$email;
 ?>
 <center>

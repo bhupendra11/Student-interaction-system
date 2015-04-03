@@ -6,6 +6,7 @@
 <?php
 require_once 'connection.php'; 
 	$email = $_SESSION['email'];
+	$user_name=$_REQUEST['user_name'];
     $college_name=$_REQUEST['college_name'];
     $college_id=$_REQUEST['college_id'];
     $branch=$_REQUEST['branch'];
@@ -52,8 +53,8 @@ require_once 'connection.php';
 
 //----------------------------------------------------------------------------------------------
     //$profile_pic=$_REQUEST['profile_pic'];
-	$sql="update user set email='$email' , branch='$branch' , college_id='$college_id', college='$college_name' ".
-		",year_of_admission='$year_of_admission',image='$target_file' where email='$email'";
+	$sql="update user set user_name='$user_name' , branch='$branch' , college_id='$college_id', college='$college_name' ".
+		 ",year_of_admission='$year_of_admission',image='$target_file' where email='$email'";
 	if (mysqli_query($connection,$sql) === TRUE) {
 		echo "Record updated successfully";
 	} else {

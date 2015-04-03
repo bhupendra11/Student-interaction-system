@@ -10,7 +10,7 @@
 	{
 		echo "<tr><td>Q".$queno." ..".$res['question']."</td><td>".$res['question_id']."</td>  <td>".$res['question_post_date']."</td> </tr><br>";
 		echo "<tr><td><form action='answerpost.php' method='get'>  </td><td><a href=php/answerpost.php?qid=$res[question_id]&uid=$res[user_id]>".
-				"<input class='btn' style='background-color:#337ab7;'".
+				"<input class='btn' style='background-color:#337ab7; '".
 				" type=button value='Answer this Question' name=send /> </a>".
 				"</form></td></tr>"; 
 		$queno++;

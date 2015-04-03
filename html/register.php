@@ -5,7 +5,7 @@
 <center>
 	<h2 style="color:black;">Registration Form</h2>
 	<table class="formtbl">
-		<form action='../php/register.php' method='POS'>
+		<form action='../php/register.php' method='POST'>
 		<tr>
 			<td style="color:black;">Full Name/User Name</td>
 			<td><input name='name' style="color:white; border:1px solid white;border-radius:12px; background-color:gray;" type="text"></input></td>
@@ -34,13 +34,13 @@
 ********************************************************************************************** -->
 
 <!--  REGISTER FORM  ______________________________________________________________________________ -->
-
+<script src="../js/main.js"></script>
 <div class="container">
 <center>
 	</br><span class="glyphicon glyphicon-pencil" style='font-size:2.0em'> <h2 style="color:black;">Sign Up</h2></br></br>
 </center>
 
-<form class="form-horizontal" action='../php/register.php' method='POST'>
+<form class="form-horizontal" action='../php/register.php' method='POST' name="myForm" onsubmit="return(validateRegister());">
 	<div class="form-group">
             <label class="control-label col-lg-offset-2 col-lg-2" for="userName" style="text-align:left;magin-left:15%;">User Name:</label>
             <div class="col-lg-4">
@@ -56,6 +56,7 @@
     </div>
     <div class="form-group">
             <label class="control-label col-lg-offset-2 col-lg-2" for="inputPassword" style="text-align:left;">Password:</label>
+
             <div class="col-lg-4">
                 <input name='password' type="password" class="form-control" id="inputPassword" placeholder="Password" style="margin-left:-10%;">
             </div>

@@ -15,6 +15,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 
 
 
+
 </head>
 <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:66px;"> 
     <div class="container" >
@@ -31,7 +32,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
                     <li class="nohover list-unstyled"><a href="../index.php" >
                    		<img  src="../images/logo.png" style="margin: -15px 0px -10px 0px;"></img></a>
                     </li>
-                    <li class="active"><a href="../index.php" >
+                    <li ><a href="../index.php" >
                     <span  class="glyphicon glyphicon-home"></span>Home</a></li>
                     <li><a><span   class="glyphicon glyphicon-envelope"></span> Notifications<span class="badge">24</span></a></li>
                     <li><a> <span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>

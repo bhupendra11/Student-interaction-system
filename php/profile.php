@@ -52,7 +52,6 @@
 		}
 	}
 
-
 //--------------------------------------------ending--------------------------------
 	//-------------------------------------Cover Picture----------------------------
 
@@ -189,7 +188,7 @@
 			            ";
 
 
-						$counter =  $counter *10;
+						//$counter =  $counter *10;
 						
 						//----------------PROFILE COMPLETION PROGRESS BAR---------------------------------
 
@@ -198,10 +197,8 @@
 	               					 <div class='panel-heading '>Profile Completion:</div>
 	                				<div class='panel-body'> 
 	                					<div class='progress'>
-									  		<div class='progress-bar progress-bar-striped active' role='progressbar' ".
-									  		"aria-valuenow=".$counter. " aria-valuemin='0' aria-valuemax='100' style='width:".$counter."px'>" .
-									   		 $counter ."%" .
-									  		"</div>
+									  		
+											<div class='progress-bar progress-bar-striped active' role='progressbar'><progress style=';background-color:green;  width:222px;'  value='$counter' max='10'></progress></div>
 										</div>
 
 	                				</div>
