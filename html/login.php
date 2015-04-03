@@ -33,12 +33,12 @@
 <!-- login form coding-->
 <!--
 <div class="container">
-<<<<<<< HEAD
+
 	<center>
 	<h2 style="color:black;">
 		Login Form
 	</h2>
-	<!--                                              login form coding                                                             -->
+	<! login form coding                                                             
 	<table class="formtbl">
 
 		<form action="../html/login.php" method="POST">
@@ -58,7 +58,7 @@
 
 	</table>    
 	
-
+-->
 
 <!--login coding ended-->
 
