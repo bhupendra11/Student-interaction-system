@@ -11,6 +11,7 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"> 
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css"> 
+	<link rel="stylesheet" type="text/css" href="../css/qaTheme.css"> 
 	<script src="../js/bootstrap-datepicker.js"></script>
 
 
@@ -68,4 +69,4 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
         </div>
      </div>
 </div>
-<body style="margin-top:80px;">
+<body class='color-bottom'style='margin-top:80px;'>
