@@ -10,7 +10,7 @@
 <?php  	
 	require_once 'connection.php';
 	$flag=false;
-	$counter=0;
+	$counter=1;
 	$email=$_SESSION['email'];
 	echo $email;
 	if($email!="")
