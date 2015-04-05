@@ -42,22 +42,23 @@
 
 <form class="form-horizontal" action='../php/register.php' method='POST' name="myForm" onsubmit="return(validateRegister());">
 	<div class="form-group">
-            <label class="control-label col-lg-offset-2 col-lg-2" for="userName">User Name:</label>
+            <label class="control-label col-lg-offset-2 col-lg-2" for="userName" style="text-align:left;magin-left:15%;">User Name:</label>
             <div class="col-lg-4">
-                <input name='name' type="text" class="form-control" id="userName" placeholder="User Name">
+                <input name='name' type="text" class="form-control" id="userName" placeholder="User Name" style="margin-left:-10%;">
             </div>
     </div>
    
     <div class="form-group">
-            <label class="control-label col-lg-offset-2 col-lg-2" for="inputEmail">Email:</label>
+            <label class="control-label col-lg-offset-2 col-lg-2" for="inputEmail" style="text-align:left;magin-left:15%;">Email:</label>
             <div class="col-lg-4">
-                <input name='email' type="email" class="form-control" id="inputEmail" placeholder="Email">
+                <input name='email' type="email" class="form-control" id="inputEmail" placeholder="Email" style="margin-left:-10%;">
             </div>
     </div>
     <div class="form-group">
-            <label class="control-label col-lg-offset-2 col-lg-2" for="inputPassword">Create Password:</label>
+            <label class="control-label col-lg-offset-2 col-lg-2" for="inputPassword" style="text-align:left;">Password:</label>
+
             <div class="col-lg-4">
-                <input name='password' type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <input name='password' type="password" class="form-control" id="inputPassword" placeholder="Password" style="margin-left:-10%;">
             </div>
     </div>
 

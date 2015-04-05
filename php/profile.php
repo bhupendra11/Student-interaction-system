@@ -30,7 +30,7 @@
 		{
 
 	?>
-<!----------$attribute variable contains the attribute of the user table because res[0] does not work------------>
+<!--$attribute variable contains the attribute of the user table because res[0] does not work-->
 	<?php 
 			$attribute = array('user_id','user_name','password','college_id','branch','year_of_admission','email','no_of_que_posted','no_of_ans_posted');
 //-----------------------------------PROFILE COMPLETION PROGRESS BAR coding ---------------------------------
@@ -53,35 +53,7 @@
 	}
 
 //--------------------------------------------ending--------------------------------
-	//-------------------------------------Cover Picture----------------------------
-
-	/*
-	echo "
-
-	<div class='container'>
-	    <div class='col-md-10'>
-	        <div class='profile-display'>
-	            <div class='profile-cover'></div> 
-	            <div class='author-info'>
-			        <div class='author-info-img' >
-			        </div>
-			        <div class='author-meta'>
-				        <h2 class='author-username'>
-				        	Deyson
-				        </h2>
-			        </div>
-		        </div>
-	        </div>
-	    </div>
-	</div> 
-
-	";
-
-	*/
-
-
-	//--------------------------------------------------------------------------------
-
+	
 
 
 	?>
@@ -104,7 +76,7 @@
 			<div class='row-fluid' >
 			  <div id='left-block' class='col-md-3 ' style='height:100% ; '> 
 
-			  <!--<div class='sidebar-nav-fixed affix'> -->";
+			 ";
 			  		if($row['image']){ $user_image=$row['image'];}
 			             	else{$user_image="../images/prof-img.jpg" ;  }
 
@@ -155,7 +127,7 @@
 
 
 	echo             "
-					  	<ul class='list-group' style='margin-top:50px;'>
+					  	<ul class='list-group color-top' style='margin-top:50px;'>
 			                <li class='list-group-item active text-muted' contenteditable='false'>Profile</li>
 			                <li class='list-group-item text-right'><span class='pull-left'><strong class=''>Joined</strong></span> 2.13.2014</li>
 			                <li class='list-group-item text-right'><span class='pull-left'><strong class=''>Name</strong></span>".$user_name."</li>
@@ -215,14 +187,14 @@
 							echo "<p style='color:green;'> Your profile is Up to date!</p>";
 						 }
 
-
+		echo "</div>";				 
 		//------------------------MIDDLE BLOCK------------------------------------------
 
 	echo "
-			    <!--    </div> -->   	
+			     	
 
-			  </div>
-			  <div id='mid-block' class=' col-md-7 ' style='height:100%; overflow:hidden; margin-top:270px;'> 
+			 
+			  <div id='mid-block' class='col-md-7 ' style=' margin-top:197px;'> 
 			 
 
 			  ";
@@ -242,30 +214,31 @@
 
 	echo "    <!------------RIGHT BLOCK---------------------------------------------------------->
 
-			  <div id='right-block' class=' col-md-2' style='height:100%; '> 
+			    <div id='right-block' class='col-md-2' style='display:block; height:100%;  '> 
 
-			  			<div class='.container' >
+			  			<div class='container' style='width:200px'>
 			            
 						<form method='POST' action='update_profile.php'>
-						<input class='btn btn-primary' type='submit' value='Update profile' name='update'>
+						<input class='col-md-10 btn btn-primary' type='submit' value='Update profile' name='update'>
 						</form>
 
-			             </div>
+			            </div>
 
 
 			  			<!------------------------------For trending ----------------------------------------------->
-			  			<div id='trending' style='margin-top:187px;'>
-			  			 	<ul class='list-group ' style='margin-top:50px;'>
+			  			<div id='trending' class='' style='margin-top:187px;'>
+			  			 	<ul class='list-group' style='margin-top:50px;'>
 
 				            	 <li class='list-group-item active text-muted' contenteditable='false'>Trending</li>
 								 <li class='list-group-item '><span class='pull-left'></span> #srm</li>
-								 <li class='list-group-item '><span class='pull-left'></span> #placements</li>
+								 <li class='list-group-item '><span class='pull-left'></span> #placements</ li>
 								 <li class='list-group-item '><span class='pull-left'></span> #iit-placements</li>
 								 <li class='list-group-item '><span class='pull-left'></span> #masti</li>
 
 			            	<ul>
-			            </div>	
-			            "
+			            </div>
+
+			    </div>        "
 			           ;
 			            //<!--------------------------------------------------------------------------------------------->
 
@@ -275,7 +248,7 @@
 
 
 
-			   </div>
+			   
 			</div>
 		</div>	  
 
