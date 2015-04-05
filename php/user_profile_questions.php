@@ -18,7 +18,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 		//--------------LATEST QA UI --------------------------------------------
 
 		$c_count++;
-		$user_query="select user_name from user where user_id=$res[user_id]";
+		$user_query="select * from user where user_id=$res[user_id]";
 			
 		$user_result=mysqli_query($connection,$user_query);
 		$user_res=mysqli_fetch_assoc( $user_result);
@@ -47,7 +47,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 					  		<strong>".$user_res['user_name']."</strong>
 					  	</div>
 					  	<div class='col-md-2 pull-right quser-pic' >
-					  		<img class='img-rounded pull-right' src='http://qph.is.quoracdn.net/main-thumb-21080020-100-jkzrblmihmkazevlfvhpbyewilsqrcsy.jpeg' width='30' alt='Gaurav Raj Anand' height='30'>
+					  		<img class='img-rounded pull-right' src=\"".$user_res['image']."\" width='30'  height='30'>
 					  	</div>
 						
 					</div>
@@ -65,7 +65,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 			{
 				
 				
-					$user_ansquery   = "select user_name from user where user_id=$res2[user_id]";
+					$user_ansquery   = "select * from user where user_id=$res2[user_id]";
 
 					$user_ansresult  = mysqli_query($connection,$user_ansquery);
 					$user_ansres     = mysqli_fetch_assoc( $user_ansresult);
@@ -75,7 +75,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 			echo    "<div class='answer' style='max-width:700px;'>
 				  		<div class='col-md-12 quser-description' >
 					  		<div class='col-md-1 pull-left quser-pic'  >
-					  			<img class='img-rounded pull-right' src='http://qph.is.quoracdn.net/main-thumb-21080020-100-jkzrblmihmkazevlfvhpbyewilsqrcsy.jpeg' width='30' alt='Gaurav Raj Anand' height='30'>
+					  			<img class='img-rounded pull-right' src=\"".$user_ansres['image']."\" width='30'  height='30'>
 					  		</div>
 							<div class='col-md-11 pull-right' >
 								<strong>".$user_ansres['user_name']."</strong>
