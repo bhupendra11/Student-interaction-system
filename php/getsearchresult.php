@@ -6,7 +6,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 <div>
 	<table class="tbl">
 		<tr width="100%">
-			<td width="20%" style="background-color:#c3dfef;position: fixed;height:100%">
+			<td width="20%" style="background-color:#e7e7ff;position: fixed;height:100%;margin-top: -1%;">
 			<center>
 				<ul style="margin-top:50%;list-style: none;margin-left:-15%;">
 <li><a href="html/question.html" class="list-group-item active" style="margin-bottom: 2%;">Post Questions</a></li>
@@ -62,7 +62,7 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 					while ($question_found = mysqli_fetch_assoc($question_result_set)) 
 					{
 						$c_count++;
-						echo "<center><table class='que'><tr><td>";
+						echo "<center><table class='que'><tr><td class='active'>";
 						$userid=$question_found['user_id'];
 						$qq="select user_name from user where user_id='$userid'";
 						$rr=mysqli_query($connection,$qq);
@@ -85,8 +85,8 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 						$answer_query = "select * from tb_answer where question_id='{$sorted[$j]}'";
 						$answer_result_set = mysqli_query($connection,$answer_query);
 						while($answer_found = mysqli_fetch_assoc($answer_result_set)){
-						echo "<center><table class='ans'><tr><td>";
-							echo htmlentities("Ans..    ".$answer_found['answer'])."<td class='post_date'>Posted @ ".$answer_found['answer_post_date']."</td>";
+						echo "<center><table class='ans'><tr><td><hr>";
+							echo htmlentities("Ans..    ".$answer_found['answer'])."<hr><td class='post_date'>Posted @ ".$answer_found['answer_post_date']."</td>";
 							echo "</td></tr></table></center><hr width='80%' style=' height: 12px;
     border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);'></hr>";
@@ -101,13 +101,13 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 ?>
 <!--                                                 HTML HOMESTUFFS                                              -->
 </td>
-<td width="20%" style="background-color:#c3dfef;position:fixed;height:100%;">
+<td width="20%" style="background-color:#e7e7ff;position:fixed;height:100%;margin-top:-1%;">
 </td>
 </tr>
 </table>
 </div>
-	<div id="footer1" style="clear:both;">
-<div style="width:100%;height:25%;background-color:#e2e2e2;position: relative; ">
+	<div id="footer1" >
+<div style="width:100%;height:25%;background-color:#e2e2e2;position: fixed; ">
 <!-- Social Footer, Colour Matching Icons -->
 <!-- Include Font Awesome Stylesheet in Header -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">

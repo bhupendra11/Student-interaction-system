@@ -49,14 +49,14 @@ error_reporting( ~E_NOTICE & ~E_DEPRECATED);
                     ?>
                 </ul>                   
                 <form class="form-search" action="./php/getsearchresult.php" method="post">
-                <div class="">
-                    <div class="input-group col-lg-3 pull-right" style="margin-top:10px;">
-                        <input type="text" class="form-control" placeholder="Search for..." name="search" >
-                        <span class="input-group-btn">
-                        <button type="submit" value="Search" name="submit" class="btn btn-default">Go!</button>
-                        </span>
-                    </div>
-                 </div>   
+                	<div class="">
+						<div class="input-group col-lg-3 pull-right" style="margin-top:10px;">
+							<input type="text" class="form-control" placeholder="Search for..." name="search" >
+							<span class="input-group-btn">
+							<button type="submit" value="Search" name="submit" class="btn btn-default" style="width: 150%;height:150%;background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#e0e0e0));color:black;">Go!</button>
+							</span>
+						</div>
+					</div>   
                 </form>
             </div>
         </div>
