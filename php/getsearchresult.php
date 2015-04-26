@@ -62,63 +62,72 @@ error_reporting(~E_NOTICE & ~E_DEPRECATED);
 					while ($question_found = mysqli_fetch_assoc($question_result_set)) 
 					{
 						$c_count++;
-						echo "<center><table class='que'><tr><td class='active'>";
+                        
+                        
+                        //full -question block started
+                        
+                        
+                        
+						echo "<div id='full-question-block' class='container color-top ' style='margin-left:16%;margin-right:30%;'>";
 						$userid=$question_found['user_id'];
 						$qq="select user_name from user where user_id='$userid'";
 						$rr=mysqli_query($connection,$qq);
 						$res2=mysqli_fetch_assoc($rr);
-						echo htmlentities("Que..     ".$question_found['question'])."</td><td class='post_date'>Posted @ ".($question_found['question_post_date'])." By:<b>".($res2[0])."</b></td>";
+                        echo "<div class='question'><h1>";
+						echo "Que..    <h1> ".$question_found['question']."<div class='col-md-12 quser-description' style='display:inline-block;'>
+					  		<div class='col-md-4 pull-right'>
+			  	
 						
-						echo "<hr style='display: block;
-    content: $;
-    height: 30px;
-     padding: 0;
-    border: none;
-    border-top: medium double #333;
-    color: #333;
-    text-align: center;
-    margin-top: -31px;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 1px 0;
-    border-radius: 20px;'></tr></table></center>";
+				Posted @ ".$question_found['question_post_date']." 	
+					  	
+					 By ".($res2[0])."</div>";
+					
+						echo "</div></div>";
+                        echo "<div class='answer' >";
+                        echo "<div class='col-md-12 quser-description' >";
 						$answer_query = "select * from tb_answer where question_id='{$sorted[$j]}'";
 						$answer_result_set = mysqli_query($connection,$answer_query);
 						while($answer_found = mysqli_fetch_assoc($answer_result_set)){
-						echo "<center><table class='ans'><tr><td><hr>";
-							echo htmlentities("Ans..    ".$answer_found['answer'])."<hr><td class='post_date'>Posted @ ".$answer_found['answer_post_date']."</td>";
-							echo "</td></tr></table></center><hr width='80%' style=' height: 12px;
-    border: 0;
-    box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);'></hr>";
+						echo "<hr>
+				  			<p>";
+							echo " ".$answer_found['answer']."</p>
+ 					
+								<div class='col-md-11 pull-right'>
+							Posted @ ".$answer_found['answer_post_date']."</div>";
+							
+    
 						}
+                        echo "</div></div>";	
+                         echo("</div>");
 						
 					}
 				}
 			}
 		}
-	}	
-	echo("<div style='font-size:12px; color:red;'>Total ".$c_count." result found..</div>");
+	}
+    
+	echo("<div style='font-size:16px; color:blue;'>Total ".$c_count." result found..</div>");
 ?>
 <!--                                                 HTML HOMESTUFFS                                              -->
 </td>
-<td width="20%" style="background-color:#e7e7ff;position:fixed;height:100%;margin-top:-1%;">
-</td>
+<!--<td width="20%" style="background-color:#e7e7ff;position:fixed;height:100%;margin-top:-1%;">
+</td>-->
 </tr>
 </table>
 </div>
-	<div id="footer1" >
-<div style="width:100%;height:25%;background-color:#e2e2e2;position: fixed; ">
+	<div id="footer1" style="margin-top: 430px;">
+<div style="width:100%;height:25%;background-color:#e2e2e2;position: relative; ">
 <!-- Social Footer, Colour Matching Icons -->
 <!-- Include Font Awesome Stylesheet in Header -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- // -->
-<div class="container">
-        <div class="text-center center-block"></div>
+<div class="container" >
+        <div class="text-center center-block" ></div>
            <center> <br />
-                <a href="https://www.facebook.com/bootsnipp"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
-	            <a href="https://twitter.com/bootsnipp"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
-	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
-	            <a href="mailto:bootsnipp@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+                <a href="https://www.facebook.com/iecsis"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+	            <a href="https://twitter.com/iecsis"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+	            <a href="https://plus.google.com/+iecsis-page"><i id="social" class="fa fa-google-plus-square fa-3x social-gp"></i></a>
+	            <a href="mailto:iecsis@gmail.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
                 </center>
 </div>
     
