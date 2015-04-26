@@ -178,7 +178,7 @@
 
 								
 						";
-						if($counter!=100)
+						if($counter!=10)
 						 {
 							echo "<p style='color:red;'>Update your profile to get better notification!</p>";
 						 }
